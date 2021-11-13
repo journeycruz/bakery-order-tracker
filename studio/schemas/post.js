@@ -32,6 +32,70 @@ export default {
       }
     },
     {
+      name: 'imageTwo',
+      title: 'Image 2',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
+    },
+    {
+      name: 'imageThree',
+      title: 'Image 3',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
+    },
+    {
+      name: 'imageFour',
+      title: 'Image 4',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
+    },
+    {
+      name: 'imageFive',
+      title: 'Image 5',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
+    },
+    {
+      name: 'imageSix',
+      title: 'Image 6',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
+    },
+    {
+      name: 'imageSeven',
+      title: 'Image 7',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
+    },
+    {
+      name: 'imageEight',
+      title: 'Image 8',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
+    },
+    {
+      name: 'imageNine',
+      title: 'Image 9',
+      type: 'image',
+      options: {
+        hotspot: true
+      }
+    },
+    {
       name: 'categories',
       title: 'Categories',
       type: 'array',

@@ -1,44 +1,44 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import { getAllPostsForHome } from '../lib/api'
-import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
+import Container from "../components/container";
+import MoreStories from "../components/more-stories";
+import HeroPost from "../components/hero-post";
+import Intro from "../components/intro";
+import Layout from "../components/layout";
+import { getAllPostsForHome } from "../lib/api";
+import Head from "next/head";
+import Features from "../components/features";
+import CTA from "../components/CTA";
+import Promo from "../components/promo";
+import Favorites from "../components/favorites";
+import Testimonials from "../components/testimonials";
+import Pricing from "../components/pricing";
+import Banner from "../components/banner";
 
 export default function Index({ allPosts, preview }) {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
   return (
     <>
       <Layout preview={preview}>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>Lisa's Bakery</title>
         </Head>
         <Container>
+          <Banner />
           <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          <Features />
+          <Promo />
+          <Testimonials />
+          <Favorites posts={allPosts} />
+          <Pricing />
+          <CTA />
         </Container>
       </Layout>
     </>
-  )
+  );
 }
 
 export async function getStaticProps({ preview = false }) {
-  const allPosts = await getAllPostsForHome(preview)
+  const allPosts = await getAllPostsForHome(preview);
   return {
     props: { allPosts, preview },
-    revalidate: 1
-  }
+    revalidate: 1,
+  };
 }
