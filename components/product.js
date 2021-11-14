@@ -3,6 +3,7 @@ import { StarIcon } from "@heroicons/react/solid";
 import { RadioGroup } from "@headlessui/react";
 import PostBody from "../components/post-body";
 import Link from "next/link";
+import { imageBuilder } from '../lib/sanity';
 
 const product = {
   name: "Basic Tee 6-Pack",
@@ -62,7 +63,15 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Product({ content, title, slug }) {
+export default function Product({
+  content,
+  title,
+  slug,
+  imageTwo,
+  imageThree,
+  imageFour,
+  imageFive
+}) {
   return (
     <div className='bg-white'>
       <div className='pt-6'>
@@ -92,8 +101,11 @@ export default function Product({ content, title, slug }) {
               </li>
             ))}
             <li className='text-sm'>
-              <Link as={`/posts/${slug}`} href='/posts/[slug]'
-                aria-current='page' className='font-medium text-gray-500
+              <Link
+                as={`/posts/${slug}`}
+                href='/posts/[slug]'
+                aria-current='page'
+                className='font-medium text-gray-500
                 hover:text-gray-600'>
                 {title}
               </Link>
@@ -105,7 +117,7 @@ export default function Product({ content, title, slug }) {
         <div className='mt-6 max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8'>
           <div className='hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block'>
             <img
-              src={product.images[0].src}
+              src={imageBuilder(imageTwo).width(1240).height(700).url()}
               alt={product.images[0].alt}
               className='w-full h-full object-center object-cover'
             />
@@ -113,14 +125,14 @@ export default function Product({ content, title, slug }) {
           <div className='hidden lg:grid lg:grid-cols-1 lg:gap-y-8'>
             <div className='aspect-w-3 aspect-h-2 rounded-lg overflow-hidden'>
               <img
-                src={product.images[1].src}
+                src={imageBuilder(imageThree).width(1240).height(700).url()}
                 alt={product.images[1].alt}
                 className='w-full h-full object-center object-cover'
               />
             </div>
             <div className='aspect-w-3 aspect-h-2 rounded-lg overflow-hidden'>
               <img
-                src={product.images[2].src}
+                src={imageBuilder(imageFour).width(1240).height(700).url()}
                 alt={product.images[2].alt}
                 className='w-full h-full object-center object-cover'
               />
@@ -128,7 +140,7 @@ export default function Product({ content, title, slug }) {
           </div>
           <div className='aspect-w-4 aspect-h-5 sm:rounded-lg sm:overflow-hidden lg:aspect-w-3 lg:aspect-h-4'>
             <img
-              src={product.images[3].src}
+              src={imageBuilder(imageFive).width(1240).height(700).url()}
               alt={product.images[3].alt}
               className='w-full h-full object-center object-cover'
             />

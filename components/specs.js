@@ -1,4 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
+import { imageBuilder } from '../lib/sanity';
+
 const features = [
     { name: 'Origin', description: 'Designed by Good Goods, Inc.' },
     { name: 'Material', description: 'Solid walnut base with rare earth magnets and powder coated steel card cover' },
@@ -8,7 +10,7 @@ const features = [
     { name: 'Considerations', description: 'Made from natural materials. Grain and color vary with each item.' },
   ]
   
-  export default function Specs() {
+  export default function Specs({ imageSix, imageSeven, imageEight, imageNine }) {
     return (
       <div className="bg-white">
         <div className="max-w-2xl mx-auto px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 lg:max-w-7xl lg:px-8 lg:grid-cols-2">
@@ -30,22 +32,22 @@ const features = [
           </div>
           <div className="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
             <img
-              src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-01.jpg"
+              src={imageBuilder(imageSix).width(1240).height(1000).url()}
               alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
               className="bg-gray-100 rounded-lg"
             />
             <img
-              src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-02.jpg"
+              src={imageBuilder(imageSeven).width(1240).height(1000).url()}
               alt="Top down view of walnut card tray with embedded magnets and card groove."
               className="bg-gray-100 rounded-lg"
             />
             <img
-              src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-03.jpg"
+              src={imageBuilder(imageEight).width(1240).height(1000).url()}
               alt="Side of walnut card tray with card groove and recessed card area."
               className="bg-gray-100 rounded-lg"
             />
             <img
-              src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-04.jpg"
+              src={imageBuilder(imageNine).width(1240).height(1000).url()}
               alt="Walnut card tray filled with cards and card angled in dedicated groove."
               className="bg-gray-100 rounded-lg"
             />
