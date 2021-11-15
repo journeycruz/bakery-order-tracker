@@ -41,7 +41,7 @@ export default function Form ({_id}) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-lg" disabled>
+    <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-6xl mx-auto" disabled>
       <input {...register("_id")} type="hidden" name="_id" value={_id} />
       <label className="block mb-5">
         <span className="text-gray-700">Name</span>

@@ -3,7 +3,9 @@ import { StarIcon } from "@heroicons/react/solid";
 import { RadioGroup } from "@headlessui/react";
 import PostBody from "../components/post-body";
 import Link from "next/link";
-import { imageBuilder } from '../lib/sanity';
+import { imageBuilder } from "../lib/sanity";
+import { format, distanceInWords, differenceInDays } from "date-fns";
+import SmallOrderForm from "./orderForm";
 
 const product = {
   name: "Basic Tee 6-Pack",
@@ -70,7 +72,9 @@ export default function Product({
   imageTwo,
   imageThree,
   imageFour,
-  imageFive
+  imageFive,
+  date,
+  author,
 }) {
   return (
     <div className='bg-white'>
@@ -112,12 +116,22 @@ export default function Product({
             </li>
           </ol>
         </nav>
-
         {/* Image gallery */}
-        <div className='mt-6 max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8'>
+        <div className='max-w-2xl mx-auto pt-6 px-4 lg:grid-rows-[auto,auto,1fr] sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8'>
+          <div className='lg:col-span-3 pb-6'>
+            <h1 className='text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
+              {title}
+            </h1>
+            <h1 className='text-base font-normal tracking-tight text-gray-400 pt-2'>
+              {differenceInDays(new Date(date), new Date()) > 3
+                ? distanceInWords(new Date(date), new Date())
+                : format(new Date(date), "MMMM dd, yyyy")}{" "}
+              &bull; {author}
+            </h1>
+          </div>
           <div className='hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block'>
             <img
-              src={imageBuilder(imageTwo).width(1240).height(700).url()}
+              src={imageBuilder(imageTwo).width(2480).height(1700).url()}
               alt={product.images[0].alt}
               className='w-full h-full object-center object-cover'
             />
@@ -125,14 +139,14 @@ export default function Product({
           <div className='hidden lg:grid lg:grid-cols-1 lg:gap-y-8'>
             <div className='aspect-w-3 aspect-h-2 rounded-lg overflow-hidden'>
               <img
-                src={imageBuilder(imageThree).width(1240).height(700).url()}
+                src={imageBuilder(imageThree).width(2480).height(1700).url()}
                 alt={product.images[1].alt}
                 className='w-full h-full object-center object-cover'
               />
             </div>
             <div className='aspect-w-3 aspect-h-2 rounded-lg overflow-hidden'>
               <img
-                src={imageBuilder(imageFour).width(1240).height(700).url()}
+                src={imageBuilder(imageFour).width(2480).height(1700).url()}
                 alt={product.images[2].alt}
                 className='w-full h-full object-center object-cover'
               />
@@ -140,26 +154,22 @@ export default function Product({
           </div>
           <div className='aspect-w-4 aspect-h-5 sm:rounded-lg sm:overflow-hidden lg:aspect-w-3 lg:aspect-h-4'>
             <img
-              src={imageBuilder(imageFive).width(1240).height(700).url()}
+              src={imageBuilder(imageFive).width(1240).height(1700).url()}
               alt={product.images[3].alt}
-              className='w-full h-full object-center object-cover'
+              className='w-full h-full object-center object-cover rounded-lg'
             />
           </div>
         </div>
 
         {/* Product info */}
-        <div className='max-w-2xl mx-auto pt-10 px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8'>
-          <div className='lg:col-span-3 lg:pr-8'>
-            <h1 className='text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl'>
-              {title}
-            </h1>
-          </div>
-
+        <div className='max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8'>
           <div className='py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-4 lg:pr-8'>
             {/* Description and details */}
             <div>
               <h3 className='sr-only'>Description</h3>
-
+              <h1 className='text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl'>
+                Description
+              </h1>
               <div className='space-y-6'>
                 <p className='text-base text-gray-900'>
                   <PostBody content={content} />

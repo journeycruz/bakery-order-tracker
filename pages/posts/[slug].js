@@ -21,6 +21,7 @@ export default function Post({ post, morePosts, preview }) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+  console.log(post)
   return (
     <Layout preview={preview}>
       <Container>
@@ -28,7 +29,7 @@ export default function Post({ post, morePosts, preview }) {
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
-          <>
+          <div className='max-w-5xl mx-auto'>
             <article>
               <Head>
                 <title>{post.title}</title>
@@ -42,6 +43,8 @@ export default function Post({ post, morePosts, preview }) {
                 imageThree={post.imageThree}
                 imageFour={post.imageFour}
                 imageFive={post.imageFive}
+                date={post.date}
+                author={post.author.name}
               />
               {/* <PostHeader
                 title={post.title}
@@ -61,7 +64,7 @@ export default function Post({ post, morePosts, preview }) {
 
             <SectionSeparator />
             {/* {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
-          </>
+          </div>
         )}
       </Container>
     </Layout>
