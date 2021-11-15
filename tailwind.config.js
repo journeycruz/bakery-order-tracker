@@ -12,9 +12,6 @@ module.exports = {
         success: '#0070f3',
         cyan: '#79FFE1',
       },
-      gridTemplateRows: {
-        '[auto,auto,1fr]': 'auto auto 1fr',
-      },
       spacing: {
         28: '7rem',
       },
