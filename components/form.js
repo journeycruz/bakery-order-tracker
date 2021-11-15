@@ -41,20 +41,24 @@ export default function Form ({_id}) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="max-w-2xl mt-28 mx-auto grid items-end grid-cols-1 lg:max-w-7xl lg:shadow-lg lg:p-8 p-4 rounded-lg" disabled>
+    <form onSubmit={handleSubmit(onSubmit)} className="max-w-2xl mt-8 lg:mt-28 mx-auto grid items-end grid-cols-1 lg:max-w-7xl lg:shadow-lg lg:p-8 p-4 rounded-lg" disabled>
       <h3 className=' text-xl font-normal tracking-tight text-gray-900 mb-6'>Let us know what you think:</h3>
       <input {...register("_id")} type="hidden" name="_id" value={_id} />
       <label className="block mb-5">
         <span className="text-gray-700">Name</span>
-        <input name="name" {...register("name", {required: true})} className="shadow border rounded py-2 px-3 form-input mt-1 block w-full" placeholder="John Appleseed"/>
+        <input name="name" {...register("name", {required: true})} className="shadow-inner border rounded py-2 px-3 form-input mt-1 block w-full" placeholder="John Appleseed"/>
       </label>
       <label className="block mb-5">
         <span className="text-gray-700">Email</span>
-        <input name="email" type="email" {...register("email", {required: true})} className="shadow border rounded py-2 px-3 form-input mt-1 block w-full" placeholder="your@email.com"/>
+        <input name="email" type="email" {...register("email", {required: true})} className="shadow-inner border rounded py-2 px-3 form-input mt-1 block w-full" placeholder="your@email.com"/>
+      </label>
+      <label className="block mb-5">
+        <span className="text-gray-700">Rating (Number between 0 and 5)</span>
+        <input name="rating" type="rating" {...register("rating", {required: true})} className="shadow-inner border rounded py-2 px-3 form-input mt-1 block w-full" placeholder="your@email.com"/>
       </label>
       <label className="block mb-5">
         <span className="text-gray-700">Comment</span>
-        <textarea {...register("comment", {required: true})} name="comment" className="shadow border rounded py-2 px-3  form-textarea mt-1 block w-full" rows="8" placeholder="Enter some long form content."></textarea>
+        <textarea {...register("comment", {required: true})} name="comment" className="shadow-inner border rounded py-2 px-3  form-textarea mt-1 block w-full" rows="8" placeholder="Enter some long form content."></textarea>
       </label>
       {/* errors will return when field validation fails  */}
       {errors.exampleRequired && <span>This field is required</span>}
