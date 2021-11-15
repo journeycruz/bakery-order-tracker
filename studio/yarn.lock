@@ -2660,6 +2660,11 @@ camelcase@^4.1.0:
   resolved "https://registry.npmjs.org/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
   integrity sha1-1UVjW+HjPFQmScaRc+Xeas+uNN0=
 
+camelcase@^5.0.0:
+  version "5.3.1"
+  resolved "https://registry.npmjs.org/camelcase/-/camelcase-5.3.1.tgz#e3c9b31569e106811df242f715725a1f4c494320"
+  integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
+
 camelize@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/camelize/-/camelize-1.0.0.tgz#164a5483e630fa4321e5af07020e531831b2609b"
@@ -7856,6 +7861,13 @@ react-icon-base@^2.1.2:
   resolved "https://registry.npmjs.org/react-icon-base/-/react-icon-base-2.1.2.tgz#a17101dad9c1192652356096860a9ab43a0766c7"
   integrity sha512-NRlRo0RPxWRMQT7osj8UCBSSXsGOxhF1pre84ildhuft5S2U382NOs7tg29osWSjbO90L2a3VTCqadA/LnAzHQ==
 
+react-icons@^3.11.0:
+  version "3.11.0"
+  resolved "https://registry.npmjs.org/react-icons/-/react-icons-3.11.0.tgz#2ca2903dfab8268ca18ebd8cc2e879921ec3b254"
+  integrity sha512-JRgiI/vdF6uyBgyZhVyYJUZAop95Sy4XDe/jmT3R/bKliFWpO/uZBwvSjWEdxwzec7SYbEPNPck0Kff2tUGM2Q==
+  dependencies:
+    camelcase "^5.0.0"
+
 react-infinite-scroll-component@^6.1.0:
   version "6.1.0"
   resolved "https://registry.npmjs.org/react-infinite-scroll-component/-/react-infinite-scroll-component-6.1.0.tgz#7e511e7aa0f728ac3e51f64a38a6079ac522407f"
@@ -8441,6 +8453,13 @@ sanity-plugin-asset-source-unsplash@^0.1.3:
     "@sanity/ui" "^0.36.12"
     react-infinite-scroll-component "^6.1.0"
     react-photo-gallery "^8.0.0"
+
+sanity-plugin-simple-star-rating@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.npmjs.org/sanity-plugin-simple-star-rating/-/sanity-plugin-simple-star-rating-0.1.6.tgz#f67059044fa26a52fc1736c891f706fc3d702d3b"
+  integrity sha512-6UBan2UPa4CLI91kqhiqd/nTABavDRusMcl72ppq0LejMuuq8vsE6PuoHgH2pN0+lUl30aNmW+urxwcu6tnIYQ==
+  dependencies:
+    react-icons "^3.11.0"
 
 sax@~1.2.4:
   version "1.2.4"

@@ -21,7 +21,7 @@ export default function Post({ post, morePosts, preview }) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
-  console.log(post)
+  console.log(post);
   return (
     <Layout preview={preview}>
       <Container>
@@ -59,8 +59,12 @@ export default function Post({ post, morePosts, preview }) {
               imageEight={post.imageEight}
               imageNine={post.imageNine}
             />
-            <Comments comments={post.comments} />
-            <Form _id={post._id} />
+            <div className='grid grid-cols-1 lg:grid-cols-2'>
+              <Comments comments={post.comments} />
+              <div className='lg:w-5/6 m-auto w-full'>
+                <Form _id={post._id} />
+              </div>
+            </div>
 
             <SectionSeparator />
             {/* {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}

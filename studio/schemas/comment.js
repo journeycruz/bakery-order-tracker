@@ -22,6 +22,15 @@ export default {
         type: 'text',
       },
       {
+        title: "Rating",
+        name: "rating",
+        type: "rating", // Required
+        description: "Apply a rating out of 5 stars",
+        options: {
+          stars: 5, // Optional. Default 5.
+        }
+      },
+      {
         name: 'post',
         type: 'reference',
         to: [

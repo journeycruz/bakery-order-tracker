@@ -41,7 +41,8 @@ export default function Form ({_id}) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-6xl mx-auto" disabled>
+    <form onSubmit={handleSubmit(onSubmit)} className="max-w-2xl mt-28 mx-auto grid items-end grid-cols-1 lg:max-w-7xl lg:shadow-lg lg:p-8 p-4 rounded-lg" disabled>
+      <h3 className=' text-xl font-normal tracking-tight text-gray-900 mb-6'>Let us know what you think:</h3>
       <input {...register("_id")} type="hidden" name="_id" value={_id} />
       <label className="block mb-5">
         <span className="text-gray-700">Name</span>
