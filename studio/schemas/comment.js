@@ -24,7 +24,7 @@ export default {
       {
         title: "Rating",
         name: "rating",
-        type: "rating", // Required
+        type: "string", // Required
         description: "Customer's Rating",
         options: {
           stars: 5, // Optional. Default 5.

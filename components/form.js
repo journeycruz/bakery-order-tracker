@@ -53,8 +53,8 @@ export default function Form ({_id}) {
         <input name="email" type="email" {...register("email", {required: true})} className="shadow-inner border rounded py-2 px-3 form-input mt-1 block w-full" placeholder="your@email.com"/>
       </label>
       <label className="block mb-5">
-        <span className="text-gray-700">Rating (Number between 0 and 5)</span>
-        <input name="rating" type="rating" {...register("rating", {required: true})} className="shadow-inner border rounded py-2 px-3 form-input mt-1 block w-full" placeholder="your@email.com"/>
+        <span className="text-gray-700">Rating</span>
+        <input name="rating" type="rating" {...register("rating", {required: true})} className="shadow-inner border rounded py-2 px-3 form-input mt-1 block w-full" placeholder="Number between 0 and 5"/>
       </label>
       <label className="block mb-5">
         <span className="text-gray-700">Comment</span>
