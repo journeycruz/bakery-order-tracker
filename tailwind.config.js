@@ -1,4 +1,8 @@
 module.exports = {
+  purge: [
+    './src/**/*.html',
+    './src/**/*.js',
+  ],
   theme: {
     extend: {
       colors: {
@@ -7,6 +11,9 @@ module.exports = {
         'accent-7': '#333',
         success: '#0070f3',
         cyan: '#79FFE1',
+      },
+      gridTemplateRows: {
+        '[auto,auto,1fr]': 'auto auto 1fr',
       },
       spacing: {
         28: '7rem',
@@ -28,5 +35,8 @@ module.exports = {
         medium: '0 8px 30px rgba(0, 0, 0, 0.12)',
       },
     },
-  }
+  },
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }
