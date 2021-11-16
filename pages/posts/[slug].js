@@ -49,7 +49,7 @@ export default function Post({ post, morePosts, preview }) {
                   date={post.date}
                   author={post.author.name}
                 />
-                <OrderForm />
+                <OrderForm _id={post._id}/>
                 {/* <PostHeader
                 title={post.title}
                 coverImage={post.coverImage}
