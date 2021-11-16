@@ -11,7 +11,7 @@ export default async function createOrder(req, res) {
   const { _id, name, email, order, neededBy } = JSON.parse(req.body)
   try {
     await client.create({
-      _type: 'order',
+      _type: 'comment',
       post: {
         _type: 'reference',
         _ref: _id,
