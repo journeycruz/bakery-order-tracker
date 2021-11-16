@@ -6,8 +6,8 @@ const config = {
   token: process.env.SANITY_API_TOKEN,
 }
 const client = sanityClient(config)
-
-export default async function createComment(req, res) {
+o
+export default async function createOrder(req, res) {
   const { _id, name, email, order, neededBy } = JSON.parse(req.body)
   try {
     await client.create({

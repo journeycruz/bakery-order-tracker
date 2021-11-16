@@ -23,10 +23,10 @@ export default function Index({ allPosts, preview }) {
         <Container>
           <Banner />
           <Intro />
-          <Features />
-          <Testimonials />
-          <Promo />
           <Favorites posts={allPosts} title='Popular Menu Items' />
+          <Testimonials />
+          <Features />
+          <Promo />
           <Pricing />
           <CTA />
         </Container>

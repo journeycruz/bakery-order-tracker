@@ -19,8 +19,8 @@ export default function Comments({ comments = [] }) {
               <StarRatings
                 rating={parseFloat(rating)}
                 starDimension='20px'
-                starSpacing='5px'
-                starRatedColor='black'
+                starSpacing='0px'
+                starRatedColor='orange'
               />
             </div>
             <span className='text-gray-500'>
