@@ -15,13 +15,15 @@ import { CMS_NAME } from "../../lib/constants";
 import Form from "../../components/form";
 import Specs from "../../components/specs";
 import Product from "../../components/product";
+import Favorites from "../../components/favorites";
+import OrderForm from "../../components/orderForm";
+
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
-  console.log(post);
   return (
     <Layout preview={preview}>
       <Container>
@@ -29,45 +31,53 @@ export default function Post({ post, morePosts, preview }) {
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
-          <div className='max-w-5xl mx-auto'>
-            <article>
-              <Head>
-                <title>{post.title}</title>
-                {/* <meta property="og:image" content={post.ogImage.url} /> */}
-              </Head>
-              <Product
-                content={post.body}
-                title={post.title}
-                slug={post.slug}
-                imageTwo={post.imageTwo}
-                imageThree={post.imageThree}
-                imageFour={post.imageFour}
-                imageFive={post.imageFive}
-                date={post.date}
-                author={post.author.name}
-              />
-              {/* <PostHeader
+          <div>
+            <div className='max-w-5xl mx-auto'>
+              <article>
+                <Head>
+                  <title>{post.title}</title>
+                  {/* <meta property="og:image" content={post.ogImage.url} /> */}
+                </Head>
+                <Product
+                  content={post.body}
+                  title={post.title}
+                  slug={post.slug}
+                  imageTwo={post.imageTwo}
+                  imageThree={post.imageThree}
+                  imageFour={post.imageFour}
+                  imageFive={post.imageFive}
+                  date={post.date}
+                  author={post.author.name}
+                />
+                <OrderForm />
+                {/* <PostHeader
                 title={post.title}
                 coverImage={post.coverImage}
                 date={post.date}
                 author={post.author}
               /> */}
-            </article>
-            <Specs
-              imageSix={post.imageSix}
-              imageSeven={post.imageSeven}
-              imageEight={post.imageEight}
-              imageNine={post.imageNine}
-            />
-            <div className='grid grid-cols-1 lg:grid-cols-2'>
-              <Comments comments={post.comments} />
-              <div className='lg:w-5/6 m-auto w-full'>
-                <Form _id={post._id} />
-              </div>
+              </article>
+              <Specs
+                imageSix={post.imageSix}
+                imageSeven={post.imageSeven}
+                imageEight={post.imageEight}
+                imageNine={post.imageNine}
+              />
             </div>
+            <div className='w-full mt-20'>
+              <Favorites posts={morePosts} title='More Like This' />
+            </div>
+            <div className='max-w-5xl mx-auto'>
+              <div className='grid grid-cols-1 lg:grid-cols-2'>
+                <Comments comments={post.comments} />
+                <div className='lg:w-5/6 m-auto w-full'>
+                  <Form _id={post._id} />
+                </div>
+              </div>
 
-            <SectionSeparator />
-            {/* {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
+              <SectionSeparator />
+              {/* {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
+            </div>
           </div>
         )}
       </Container>
