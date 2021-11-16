@@ -6,12 +6,12 @@ const config = {
   token: process.env.SANITY_API_TOKEN,
 }
 const client = sanityClient(config)
-o
+
 export default async function createOrder(req, res) {
   const { _id, name, email, order, neededBy } = JSON.parse(req.body)
   try {
     await client.create({
-      _type: 'comment',
+      _type: 'order',
       post: {
         _type: 'reference',
         _ref: _id,
