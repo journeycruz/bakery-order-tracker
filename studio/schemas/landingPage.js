@@ -1,10 +1,10 @@
-import { HiHome } from 'react-icons/hi'
+import { FcShop } from 'react-icons/fc'
 
 export default {
     name: 'landingPage',
     title: 'Landing Page',
     type: 'document',
-    icon: HiHome,
+    icon: FcShop,
     fields: [
       {
         name: 'title',

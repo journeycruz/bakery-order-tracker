@@ -1,11 +1,11 @@
 {
   "root": true,
   "api": {
-    "projectId": "PLACEHOLDER_ENV_VARIABLES_WILL_HANDLE_FOR_US",
-    "dataset": "PLACEHOLDER_ENV_VARIABLES_WILL_HANDLE_FOR_US"
+    "projectId": "process.env.SANITY_STUDIO_API_PROJECT_ID",
+    "dataset": "process.env.NEXT_PUBLIC_SANITY_DATASET"
   },
   "project": {
-    "name": "Liza's Lil Pies and More",
+    "name": "Studio | Liza's Lil Pies and More",
     "basePath": "/studio"
   },
   "plugins": [

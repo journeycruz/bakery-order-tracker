@@ -1,10 +1,10 @@
-import { HiIdentification } from 'react-icons/hi'
+import { FcAssistant } from 'react-icons/fc'
 
 export default {
   name: 'author',
   title: 'People',
   type: 'document',
-  icon: HiIdentification,
+  icon: FcAssistant,
   fields: [
     {
       name: 'name',

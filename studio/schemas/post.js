@@ -1,10 +1,10 @@
-import { HiCake } from 'react-icons/hi'
+import { FcReading } from 'react-icons/fc'
 
 export default {
   name: 'post',
   title: 'Menu Items',
   type: 'document',
-  icon: HiCake,
+  icon: FcReading,
   fields: [
     {
       name: 'title',

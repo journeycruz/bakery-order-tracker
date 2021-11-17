@@ -1,10 +1,10 @@
-import { HiCollection } from 'react-icons/hi'
+import { FcFilledFilter } from 'react-icons/fc'
 
 export default {
   name: 'category',
   title: 'Categories',
   type: 'document',
-  icon: HiCollection,
+  icon: FcFilledFilter,
   fields: [
     {
       name: 'title',
