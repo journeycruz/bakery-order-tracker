@@ -1,7 +1,10 @@
+import { HiCake } from 'react-icons/hi'
+
 export default {
   name: 'post',
-  title: 'Post',
+  title: 'Menu Items',
   type: 'document',
+  icon: HiCake,
   fields: [
     {
       name: 'title',

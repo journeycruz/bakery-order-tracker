@@ -1,7 +1,10 @@
+import { HiCollection } from 'react-icons/hi'
+
 export default {
   name: 'category',
-  title: 'Category',
+  title: 'Categories',
   type: 'document',
+  icon: HiCollection,
   fields: [
     {
       name: 'title',

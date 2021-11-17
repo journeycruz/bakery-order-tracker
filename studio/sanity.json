@@ -16,8 +16,8 @@
     "@sanity/desk-tool",
     "simple-star-rating",
     "content-calendar",
-    "dark-mode",
-    "dark-theme-blue"
+    "@sanity/dashboard",
+    "media"
   ],
   "env": {
     "development": {
@@ -30,6 +30,14 @@
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "./dashboardConfig.js"
+    },
+    {
+      "implements": "part:@sanity/form-builder/input/image/asset-sources",
+      "path": "./assetSources.js"
     }
   ]
 }

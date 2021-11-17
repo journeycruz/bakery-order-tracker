@@ -1,7 +1,10 @@
+import { FcAdvertising } from 'react-icons/fc'
+
 export default {
     name: 'comment',
     type: 'document',
-    title: 'Comment',
+    title: 'Comments',
+    icon: FcAdvertising,
     fields: [
       {
         name: 'name',
@@ -24,7 +27,7 @@ export default {
       {
         title: "Rating",
         name: "rating",
-        type: "string", // Required
+        type: "number", // Required
         description: "Customer's Rating",
       },
       {
@@ -39,7 +42,7 @@ export default {
       select: {
         name: 'name',
         comment: 'comment',
-        post: 'post.title'
+        post: 'post.title',
       },
       prepare({name, comment, post}) {
         return {

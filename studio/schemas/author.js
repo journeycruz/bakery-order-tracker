@@ -1,7 +1,10 @@
+import { HiIdentification } from 'react-icons/hi'
+
 export default {
   name: 'author',
-  title: 'Author',
+  title: 'People',
   type: 'document',
+  icon: HiIdentification,
   fields: [
     {
       name: 'name',

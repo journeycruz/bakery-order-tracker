@@ -1,7 +1,10 @@
+import { FcCalendar } from 'react-icons/fc'
+
 export default {
     name: 'order',
     type: 'document',
     title: 'Orders',
+    icon: FcCalendar,
     fields: [
       {
         name: 'name',
