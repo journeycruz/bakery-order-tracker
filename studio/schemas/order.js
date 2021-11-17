@@ -1,18 +1,21 @@
 export default {
     name: 'order',
     type: 'document',
-    title: 'Order',
+    title: 'Orders',
     fields: [
       {
         name: 'name',
         type: 'string',
+      }, 
+      {
+        name: 'phoneNumber',
+        type: 'number',
+        readOnly: true,
       },
       {
-        title: 'Approved',
-        name: 'approved',
-        type: 'boolean',
-        description: "Orders won't appear on the calendar without approval"
-      },   
+        name: 'alternatePhone',
+        type: 'number',
+      },  
       {
         name: 'email',
         type: 'string',
@@ -24,6 +27,14 @@ export default {
       {
         name: 'neededBy',
         type: 'string'
+      },
+      {
+        name: 'scheduleOrder',
+        type: 'date',
+        options: {
+          dateFormat: 'MMMM DD, yyyy',
+          calendarTodayLabel: 'Today'
+        }
       },
       {
         name: 'post',
@@ -41,7 +52,7 @@ export default {
       },
       prepare({name, order, post}) {
         return {
-          title: `${name} on ${post}`,
+          title: `${name} ordered ${post}`,
           subtitle: order
         }
       }

@@ -1,0 +1,14 @@
+{
+    "types": [{
+        "type": "order",
+        "field": "scheduleOrder",
+        "titleField": "name"
+    }],
+    "calendar": {
+        "event": {
+            "dateFormat": "MMMM, dd yyyy",
+            "timeFormat": "hh:mm a",
+            "showAuthor": "false"
+        }
+    }
+}

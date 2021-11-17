@@ -5,7 +5,7 @@
     "dataset": "PLACEHOLDER_ENV_VARIABLES_WILL_HANDLE_FOR_US"
   },
   "project": {
-    "name": "Next.js Comment-enabled blog",
+    "name": "Liza's Lil Pies and More",
     "basePath": "/studio"
   },
   "plugins": [
@@ -14,7 +14,10 @@
     "@sanity/default-layout",
     "@sanity/default-login",
     "@sanity/desk-tool",
-    "simple-star-rating"
+    "simple-star-rating",
+    "content-calendar",
+    "dark-mode",
+    "dark-theme-blue"
   ],
   "env": {
     "development": {
