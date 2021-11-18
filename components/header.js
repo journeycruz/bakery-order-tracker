@@ -80,7 +80,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Header() {
   return (
     <Popover className="relative bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -111,7 +111,7 @@ export default function Example() {
                       'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                     )}
                   >
-                    <span>Solutions</span>
+                    <span>Pies & More</span>
                     <ChevronDownIcon
                       className={classNames(
                         open ? 'text-gray-600' : 'text-gray-400',
@@ -171,7 +171,7 @@ export default function Example() {
               Pricing
             </a>
             <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-              Docs
+              Contact
             </a>
 
             <Popover className="relative">
@@ -247,14 +247,11 @@ export default function Example() {
             </Popover>
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
-              Sign in
-            </a>
             <a
               href="#"
               className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
             >
-              Sign up
+              Place An Order
             </a>
           </div>
         </div>
@@ -326,14 +323,8 @@ export default function Example() {
                   href="#"
                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
                 >
-                  Sign up
+                  Place An Order
                 </a>
-                <p className="mt-6 text-center text-base font-medium text-gray-500">
-                  Existing customer?{' '}
-                  <a href="#" className="text-indigo-600 hover:text-indigo-500">
-                    Sign in
-                  </a>
-                </p>
               </div>
             </div>
           </div>

@@ -10,8 +10,8 @@ export default function Banner() {
   }
 
   return (
-    <div className='pb-16'>
-      <div className='bg-indigo-600 fixed w-full z-50'>
+    <div className='lg:pb-16 md:pb-16 pb-24'>
+      <div className='bg-indigo-600 fixed w-full z-50 shadow-xl'>
         <div className='max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between flex-wrap'>
             <div className='w-0 flex-1 flex items-center'>
@@ -32,7 +32,7 @@ export default function Banner() {
               <a
                 href='#'
                 className='flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-white hover:bg-indigo-50'>
-                Learn more
+                Place An Order
               </a>
             </div>
             <div className='order-2 flex-shrink-0 sm:order-3 sm:ml-3'>

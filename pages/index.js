@@ -12,22 +12,24 @@ import Favorites from "../components/favorites";
 import Testimonials from "../components/testimonials";
 import Pricing from "../components/pricing";
 import Banner from "../components/banner";
+import HeaderSlim from "../components/headerSlim";
 
 export default function Index({ allPosts, preview }) {
   return (
     <>
       <Layout preview={preview}>
         <Head>
-          <title>Lisa's Bakery</title>
+          <title>Liza's Lil Pies and More</title>
         </Head>
         <Container>
           <Banner />
+          <HeaderSlim />
           <Intro />
           <Favorites posts={allPosts} title='Popular Menu Items' />
-          <Testimonials />
           <Features />
-          <Promo />
+          <Testimonials />
           <Pricing />
+          <Promo />
           <CTA />
         </Container>
       </Layout>

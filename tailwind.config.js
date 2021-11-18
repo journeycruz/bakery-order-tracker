@@ -1,6 +1,9 @@
 module.exports = {
   theme: {
     extend: {
+      padding: {
+        'pb-27': 'padding-bottom: 98px',
+      },
       colors: {
         'accent-1': '#FAFAFA',
         'accent-2': '#EAEAEA',
