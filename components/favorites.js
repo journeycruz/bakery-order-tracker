@@ -34,8 +34,8 @@ export default function Favorites({ posts, title }) {
   return (
     <div className='bg-gray-100'>
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='max-w-2xl mx-auto sm:py-24 lg:py-20 lg:max-w-none'>
-          <h2 className='text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl pb-6'>
+        <div className='max-w-2xl mx-auto py-12 lg:py-20 lg:max-w-none'>
+          <h2 className='text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl pb-6 text-center md:text-left'>
             {title}
           </h2>
           <div className='mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-6'>
@@ -53,7 +53,7 @@ export default function Favorites({ posts, title }) {
                   />
                   </Link>
                 </div>
-                <h3 className='mt-3 ml-1 text-md text-gray-700'>
+                <h3 className='mt-3 ml-1 text-lg text-gray-700'>
                   <span>{post.title}</span>
                 </h3>
                 {/* <p className="text-base font-semibold text-gray-900">{callout.description}</p> */}
@@ -61,7 +61,7 @@ export default function Favorites({ posts, title }) {
             ))}
           </div>
           <div className='grid group lg:justify-items-end w-full mt-12 justify-content-center'>
-          <div className='inline-flex items-end justify-end px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700'>Browse More</div>
+          <div className='inline-flex justify-center md:items-end md:justify-end px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700'>Browse More</div>
           </div>
         </div>
       </div>

@@ -24,7 +24,9 @@
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "react-hook-form": "^7.3.6",
+        "react-icons": "^4.3.1",
         "react-star-ratings": "^2.3.0",
+        "react-ticker": "^1.2.2",
         "swr": "^0.5.5"
     },
     "devDependencies": {

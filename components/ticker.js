@@ -1,19 +1,21 @@
-import React from 'react'
+export default function HomeTicker() {
+  return (
+    <div class='relative flex overflow-x-hidden'>
+      <div class='py-12 animate-loop whitespace-nowrap'>
+        <span class='mx-4 text-4xl p-6 bg-gray-100 shadow-xl h-32 w-20 rounded-3xl'>Marquee Item 1</span>
+        <span class='mx-4 text-4xl p-6 bg-gray-100 shadow-xl h-32 w-20 rounded-3xl'>Marquee Item 2</span>
+        <span class='mx-4 text-4xl p-6 bg-gray-100 shadow-xl h-32 w-20 rounded-3xl'>Marquee Item 3</span>
+        <span class='mx-4 text-4xl p-6 bg-gray-100 shadow-xl h-32 w-20 rounded-3xl'>Marquee Item 4</span>
+        <span class='mx-4 text-4xl p-6 bg-gray-100 shadow-xl h-32 w-20 rounded-3xl'>Marquee Item 5</span>
+      </div>
 
-function Ticker() {
-    return (
-        <div className='relative'>
-            <div className='absolute right-0 bottom-1/2 left-0 bg-gradient-to-t from-gray-100 pointer-events-none'>
-                <div className='flex overflow-hidden -my-8'>
-                    <ul className='flex items-center w-full py-8'>
-                        <li className='px-3 md:px-4 flex-none transform translate-x-full'>
-                            test
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    )
+      <div class='absolute top-0 py-12 animate-loop2 whitespace-nowrap'>
+        <span class='mx-4 text-4xl p-6 bg-gray-100 shadow-xl h-32 w-20 rounded-3xl'>Marquee Item 1</span>
+        <span class='mx-4 text-4xl p-6 bg-gray-100 shadow-xl h-32 w-20 rounded-3xl'>Marquee Item 2</span>
+        <span class='mx-4 text-4xl p-6 bg-gray-100 shadow-xl h-32 w-20 rounded-3xl'>Marquee Item 3</span>
+        <span class='mx-4 text-4xl p-6 bg-gray-100 shadow-xl h-32 w-20 rounded-3xl'>Marquee Item 4</span>
+        <span class='mx-4 text-4xl p-6 bg-gray-100 shadow-xl h-32 w-20 rounded-3xl'>Marquee Item 5</span>
+      </div>
+    </div>
+  );
 }
-
-export default Ticker

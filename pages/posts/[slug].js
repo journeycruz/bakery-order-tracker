@@ -48,8 +48,8 @@ export default function Post({ post, morePosts, preview }) {
                   imageFive={post.imageFive}
                   date={post.date}
                   author={post.author.name}
+                  id={post._id}
                 />
-                <OrderForm _id={post._id}/>
                 {/* <PostHeader
                 title={post.title}
                 coverImage={post.coverImage}

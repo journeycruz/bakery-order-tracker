@@ -1,6 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { SpeakerphoneIcon, XIcon } from "@heroicons/react/outline";
-import { useState } from "react";
+import { useState, Fragment } from "react";
+import { Transition } from "@headlessui/react";
 
 export default function Banner() {
   const [isOpen, setIsOpen] = useState(true);
@@ -10,7 +11,7 @@ export default function Banner() {
   }
 
   return (
-    <div className='lg:pb-16 md:pb-16 pb-24'>
+    <div className='lg:pb-16 md:pb-16 pb-24 mb-3.5 md:mb-0'>
       <div className='bg-indigo-600 fixed w-full z-50 shadow-xl'>
         <div className='max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between flex-wrap'>

@@ -13,6 +13,7 @@ import Testimonials from "../components/testimonials";
 import Pricing from "../components/pricing";
 import Banner from "../components/banner";
 import HeaderSlim from "../components/headerSlim";
+import HomeTicker from "../components/ticker";
 
 export default function Index({ allPosts, preview }) {
   return (

@@ -5,7 +5,7 @@ import PostBody from "../components/post-body";
 import Link from "next/link";
 import { imageBuilder } from "../lib/sanity";
 import { format, distanceInWords, differenceInDays } from "date-fns";
-import SmallOrderForm from "./orderForm";
+import OrderForm from "./orderForm";
 
 const product = {
   name: "Basic Tee 6-Pack",
@@ -75,6 +75,7 @@ export default function Product({
   imageFive,
   date,
   author,
+  _id,
 }) {
   return (
     <div className='bg-white'>
@@ -162,8 +163,8 @@ export default function Product({
         </div>
 
         {/* Product info */}
-        <div className='max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8'>
-          <div className='py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-4 lg:pr-8'>
+        <div className='max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
+          <div className='py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-1 lg:pr-8'>
             {/* Description and details */}
             <div>
               <h3 className='sr-only'>Description</h3>
@@ -193,11 +194,13 @@ export default function Product({
 
             <div className='mt-10'>
               <h2 className='text-sm font-medium text-gray-900'>Details</h2>
-
               <div className='mt-4 space-y-6'>
                 <p className='text-sm text-gray-600'>{product.details}</p>
               </div>
             </div>
+          </div>
+          <div className='lg:col-span-1'>
+            <OrderForm id={_id} />
           </div>
         </div>
       </div>

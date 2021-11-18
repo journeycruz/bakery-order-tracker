@@ -62,8 +62,8 @@ export default function OrderForm({ _id }) {
     <div>
       <div class='min-h-screen bg-transparent py-6 flex flex-col justify-center sm:py-12 mb-12'>
         <div class='relative md:w-11/12 md:mx-auto sm:mx-auto'>
-          <div class='absolute inset-0 bg-gradient-to-r from-pink-400 to-red-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-3 sm:rounded-3xl'></div>
-          <div class='relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20'>
+          <div class='absolute inset-0 bg-gradient-to-r from-pink-400 to-red-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-3 rounded-3xl'></div>
+          <div class='relative bg-white shadow-lg rounded-3xl p-6'>
             <form
               onSubmit={handleSubmit(onSubmit)}
               className='mx-auto grid items-end grid-cols-1 p-4 rounded-lg'
@@ -122,7 +122,7 @@ export default function OrderForm({ _id }) {
               <input
                 type='submit'
                 value='Submit Order'
-                className='shadow w-1/3 bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded'
+                className='shadow w-1/2 bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded'
               />
             </form>
           </div>
