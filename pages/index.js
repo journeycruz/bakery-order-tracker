@@ -26,9 +26,9 @@ export default function Index({ allPosts, preview }) {
           <Banner />
           <HeaderSlim />
           <Intro />
+          <Testimonials />
           <Favorites posts={allPosts} title='Popular Menu Items' />
           <Features />
-          <Testimonials />
           <Pricing />
           <Promo />
           <CTA />

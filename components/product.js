@@ -13,7 +13,7 @@ const product = {
   href: "#",
   breadcrumbs: [
     { id: 1, name: "Home", href: "/" },
-    { id: 2, name: "Menu", href: "#" },
+    { id: 2, name: "Menu", href: "/menu" },
   ],
   images: [
     {
@@ -87,11 +87,12 @@ export default function Product({
             {product.breadcrumbs.map((breadcrumb) => (
               <li key={breadcrumb.id}>
                 <div className='flex items-center'>
+                  <Link href={breadcrumb.href} as={breadcrumb.href}>
                   <a
-                    href={breadcrumb.href}
                     className='mr-2 text-sm font-medium text-gray-900'>
                     {breadcrumb.name}
                   </a>
+                  </Link>
                   <svg
                     width={16}
                     height={20}
