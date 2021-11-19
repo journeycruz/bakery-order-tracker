@@ -12,7 +12,7 @@ export default function Banner() {
 
   return (
     <div className='lg:pb-16 md:pb-16 pb-24 mb-3.5 md:mb-0'>
-      <div className='bg-indigo-600 fixed w-full z-50 shadow-xl'>
+      <div className='bg-indigo-600 fixed w-full z-50 shadow-md'>
         <div className='max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between flex-wrap'>
             <div className='w-0 flex-1 flex items-center'>

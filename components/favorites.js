@@ -33,7 +33,7 @@ const callouts = [
 export default function Favorites({ posts, title }) {
   return (
     <div className='bg-gray-100'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+      <div className='max-w-7xl mx-auto px-12 sm:px-6 lg:px-8'>
         <div className='max-w-2xl mx-auto py-12 lg:py-20 lg:max-w-none'>
           <h2 className='text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl pb-6 text-center md:text-left'>
             {title}
