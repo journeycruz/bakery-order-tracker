@@ -1,4 +1,9 @@
 module.exports = {
+  variants: {
+    extend: {
+      rotate: ["active", "group-hover"],
+    },
+  },
   theme: {
     screens: {
       sm: "640px",
@@ -17,29 +22,6 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     extend: {
-      keyframes: {
-        wiggle: {
-          "0%, 100%": {
-            transform: "rotate(-3deg)",
-          },
-          "50%": {
-            transform: "rotate(3deg)",
-          },
-        },
-        loop: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' },
-        },
-        loop2: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(0%)' },
-        },
-      },
-      animation: {
-        wiggle: "wiggle 15s ease-in-out infinite",
-        loop: 'loop 120s linear infinite',
-        loop2: 'loop2 120s linear infinite'
-      },
       colors: {
         "accent-1": "#FAFAFA",
         "accent-2": "#EAEAEA",

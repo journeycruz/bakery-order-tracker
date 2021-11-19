@@ -31,35 +31,56 @@ const callouts = [
 ];
 
 export default function Favorites({ posts, title }) {
+  console.log(posts)
   return (
     <div className='bg-gray-100'>
       <div className='max-w-7xl mx-auto px-12 sm:px-6 lg:px-8'>
-        <div className='max-w-2xl mx-auto py-12 lg:py-20 lg:max-w-none'>
-          <h2 className='text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl pb-6 text-center md:text-left'>
+        <div className='mx-auto py-12 lg:py-20 lg:max-w-none'>
+          <h2 className='text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl pb-6 text-center lg:text-left'>
             {title}
           </h2>
-          <div className='mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-12'>
+          <div className='space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-12'>
             {posts.slice(0, 3).map((post) => (
-              <div className='bg-white px-6 py-6 rounded-3xl hover:shadow-2xl'>
-                <div key={post.title} className='group relative'>
-                  <div className='relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1'>
-                    <Link as={`/posts/${post.slug}`} href='/posts/[slug]'>
-                      <img
-                        src={imageBuilder(post.coverImage)
-                          .width(1240)
-                          .height(540)
-                          .url()}
-                        alt={post.title}
-                        className='w-full h-full object-center object-cover'
-                      />
-                    </Link>
+              <>
+                <div class='min-h-24 bg-transparent py-6 flex flex-col justify-center sm:py-12 group'>
+                  <div class='relative md:w-11/12 md:mx-auto sm:mx-auto'>
+                    <div class='absolute inset-0 bg-gradient-to-r from-pink-400 to-red-500 shadow-lg transform -skew-y-3 transition ease-in-out duration-300 sm:skew-y-0 sm:-rotate-3 rounded-3xl group-hover:rotate-0 group-hover:shadow-2xl'></div>
+                    <div class='relative bg-white shadow-lg hover:shadow-2xl cursor-pointer transition ease-in-out duration-300 rounded-3xl p-6 transform hover:-translate-y-1'>
+                      <Link as={`/posts/${post.slug}`} href='/posts/[slug]'>
+                        <div key={post.title}>
+                          <img
+                            src={imageBuilder(post.coverImage)
+                              .width(1240)
+                              .height(540)
+                              .url()}
+                            alt={post.title}
+                            className='w-full object-center object-cover'
+                          />
+                          <div class='py-4'>
+                            <div class='font-bold text-xl mb-2'>
+                              {post.title}
+                            </div>
+                            {/* <p class='text-gray-700 text-base'>
+                              {post.content}
+                            </p> */}
+                          </div>
+                          <div class='pt-4 pb-2'>
+                            <span class='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>
+                              #photography
+                            </span>
+                            <span class='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>
+                              #travel
+                            </span>
+                            <span class='inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'>
+                              #winter
+                            </span>
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
                   </div>
-                  <h3 className='mt-3 ml-1 text-lg text-gray-700'>
-                    <span>{post.title}</span>
-                  </h3>
-                  {/* <p className="text-base font-semibold text-gray-900">{callout.description}</p> */}
                 </div>
-              </div>
+              </>
             ))}
           </div>
           <div className='grid group lg:justify-items-end w-full mt-12 justify-content-center'>

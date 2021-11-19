@@ -83,15 +83,14 @@ export default function Product({
         <nav aria-label='Breadcrumb'>
           <ol
             role='list'
-            className='max-w-2xl mx-auto px-4 flex items-center space-x-2 sm:px-6 lg:max-w-7xl lg:px-8'>
+            className='max-w-2xl mx-auto px-4 flex items-center space-x-2 sm:px-6 lg:max-w-5xl lg:px-8'>
             {product.breadcrumbs.map((breadcrumb) => (
               <li key={breadcrumb.id}>
                 <div className='flex items-center'>
                   <Link href={breadcrumb.href} as={breadcrumb.href}>
-                  <a
-                    className='mr-2 text-sm font-medium text-gray-900'>
-                    {breadcrumb.name}
-                  </a>
+                    <a className='mr-2 text-sm font-medium text-gray-900'>
+                      {breadcrumb.name}
+                    </a>
                   </Link>
                   <svg
                     width={16}
@@ -119,7 +118,7 @@ export default function Product({
           </ol>
         </nav>
         {/* Image gallery */}
-        <div className='max-w-2xl mx-auto pt-6 px-4 lg:grid-rows-[auto,auto,1fr] sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8'>
+        <div className='max-w-2xl mx-auto pt-6 px-4 lg:grid-rows-[auto,auto,1fr] sm:px-6 lg:max-w-5xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8'>
           <div className='lg:col-span-3 pb-6'>
             <h1 className='text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
               {title}
@@ -164,8 +163,8 @@ export default function Product({
         </div>
 
         {/* Product info */}
-        <div className='max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
-          <div className='py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-1 lg:pr-8'>
+        <div className='max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-5xl lg:pt-16 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
+          <div className='pt-10 lg:pt-6 lg:col-start-1 lg:col-span-1 lg:pr-8'>
             {/* Description and details */}
             <div>
               <h3 className='sr-only'>Description</h3>
@@ -192,17 +191,28 @@ export default function Product({
                 </ul>
               </div>
             </div>
-
-            <div className='mt-10'>
-              <h2 className='text-sm font-medium text-gray-900'>Details</h2>
-              <div className='mt-4 space-y-6'>
-                <p className='text-sm text-gray-600'>{product.details}</p>
-              </div>
-            </div>
+            {/* <div className='grid grid-cols-2 gap-x-8 mt-10 justify-between'>
+              <img
+                src={imageBuilder(imageFive).width(1240).height(820).url()}
+                alt={product.images[3].alt}
+                className='w-full h-full object-center object-cover rounded-lg'
+              />
+              <img
+                src={imageBuilder(imageFive).width(1240).height(820).url()}
+                alt={product.images[3].alt}
+                className='w-full h-full object-center object-cover rounded-lg'
+              />
+            </div> */}
           </div>
           <div className='lg:col-span-1'>
             <OrderForm id={_id} />
           </div>
+        </div>
+      </div>
+      <div className='mx-auto my-16 px-4 md:max-w-2xl lg:max-w-5xl lg:px-8 lg:mt-0'>
+        <h2 className='text-sm font-medium text-gray-900'>Details</h2>
+        <div className='mt-4 space-y-6'>
+          <p className='text-sm text-gray-600'>{product.details}</p>
         </div>
       </div>
     </div>

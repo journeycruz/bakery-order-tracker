@@ -1,132 +1,137 @@
-import { FcReading } from 'react-icons/fc'
+import { FcReading } from "react-icons/fc";
 
 export default {
-  name: 'post',
-  title: 'Menu Items',
-  type: 'document',
+  name: "post",
+  title: "Menu Items",
+  type: "document",
   icon: FcReading,
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string'
+      name: "title",
+      title: "Title",
+      type: "string",
     },
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
+      name: "excerpt",
+      title: "Short Excerpt",
+      type: "string",
+    },
+    {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
       options: {
-        source: 'title',
-        maxLength: 96
-      }
+        source: "title",
+        maxLength: 96,
+      },
     },
     {
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'}
+      name: "author",
+      title: "Author",
+      type: "reference",
+      to: { type: "author" },
     },
     {
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
+      name: "mainImage",
+      title: "Main image",
+      type: "image",
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     },
     {
-      name: 'imageTwo',
-      title: 'Image 2',
-      type: 'image',
+      name: "imageTwo",
+      title: "Image 2",
+      type: "image",
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     },
     {
-      name: 'imageThree',
-      title: 'Image 3',
-      type: 'image',
+      name: "imageThree",
+      title: "Image 3",
+      type: "image",
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     },
     {
-      name: 'imageFour',
-      title: 'Image 4',
-      type: 'image',
+      name: "imageFour",
+      title: "Image 4",
+      type: "image",
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     },
     {
-      name: 'imageFive',
-      title: 'Image 5',
-      type: 'image',
+      name: "imageFive",
+      title: "Image 5",
+      type: "image",
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     },
     {
-      name: 'imageSix',
-      title: 'Image 6',
-      type: 'image',
+      name: "imageSix",
+      title: "Image 6",
+      type: "image",
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     },
     {
-      name: 'imageSeven',
-      title: 'Image 7',
-      type: 'image',
+      name: "imageSeven",
+      title: "Image 7",
+      type: "image",
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     },
     {
-      name: 'imageEight',
-      title: 'Image 8',
-      type: 'image',
+      name: "imageEight",
+      title: "Image 8",
+      type: "image",
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     },
     {
-      name: 'imageNine',
-      title: 'Image 9',
-      type: 'image',
+      name: "imageNine",
+      title: "Image 9",
+      type: "image",
       options: {
-        hotspot: true
-      }
+        hotspot: true,
+      },
     },
     {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}]
+      name: "categories",
+      title: "Categories",
+      type: "array",
+      of: [{ type: "reference", to: { type: "category" } }],
     },
     {
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime'
+      name: "publishedAt",
+      title: "Published at",
+      type: "datetime",
     },
     {
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent'
-    }
+      name: "body",
+      title: "Body",
+      type: "blockContent",
+    },
   ],
 
   preview: {
     select: {
-      title: 'title',
-      author: 'author.name',
-      media: 'mainImage'
+      title: "title",
+      author: "author.name",
+      media: "mainImage",
     },
     prepare(selection) {
-      const {author} = selection
+      const { author } = selection;
       return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`
-      })
-    }
-  }
-}
+        subtitle: author && `by ${author}`,
+      });
+    },
+  },
+};
