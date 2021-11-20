@@ -29,6 +29,9 @@ module.exports = {
         success: "#0070f3",
         cyan: "#79FFE1",
       },
+      spacing: {
+        28: "8rem",
+      },
       fontSize: {
         "5xl": "2.5rem",
         "6xl": "2.75rem",
