@@ -31,10 +31,12 @@ export default () =>
         .schemaType("author")
         .child(S.documentTypeList("author").title("People")),
       S.listItem()
-        .title("Landing Page")
-        .schemaType("landingPage")
+        .title("Hero Section")
         .child(
-          S.documentTypeList("landingPage").title("Landing Page Sections")
+          S.editor()
+            .id("landingPage")
+            .schemaType("landingPage")
+            .documentId("landingPage")
         ),
       // This returns an array of all the document types
       // defined in schema.js. We filter out those that we have

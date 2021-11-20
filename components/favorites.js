@@ -32,17 +32,17 @@ const callouts = [
 
 export default function Favorites({ posts, title }) {
   return (
-    <div className='bg-gray-100'>
-      <div className='max-w-7xl mx-auto px-12 sm:px-6 lg:px-8'>
+    <div className='bg-gray-100 py-6 md:py-0'>
+      <div className='max-w-7xl mx-auto md:px-12 sm:px-2 lg:px-8'>
         <div className='mx-auto py-12 lg:py-20 lg:max-w-none'>
-          <h2 className='text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
+          <h2 className='pb-8 md:pb-0 text-3xl text-center lg:text-left font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
             {title}
           </h2>
           <div className='space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-12'>
             {posts.slice(0, 3).map((post) => (
               <>
                 <div className='min-h-24 bg-transparent py-6 flex flex-col justify-center sm:py-12 group'>
-                  <div className='relative md:w-11/12 md:mx-auto sm:mx-auto'>
+                  <div className='relative w-11/12 mx-auto'>
                     <div className='absolute inset-0 bg-gradient-to-r from-pink-400 to-red-500 shadow-lg transform -skew-y-3 transition ease-in-out duration-300 sm:skew-y-0 sm:-rotate-3 rounded-3xl group-hover:rotate-0 group-hover:shadow-2xl'></div>
                     <div className='relative bg-white shadow-lg hover:shadow-2xl cursor-pointer transition ease-in-out duration-300 rounded-3xl p-6 transform hover:-translate-y-1'>
                       <Link as={`/posts/${post.slug}`} href='/posts/[slug]'>
@@ -53,7 +53,7 @@ export default function Favorites({ posts, title }) {
                               .height(540)
                               .url()}
                             alt={post.title}
-                            className='w-full object-center object-cover rounded-md'
+                            className='w-full object-center object-cover h-48 rounded-md'
                           />
                           <div className='py-4'>
                             <div className='font-bold text-xl mb-2'>
@@ -82,11 +82,11 @@ export default function Favorites({ posts, title }) {
               </>
             ))}
           </div>
-          <div className='grid w-1/5 items-center mt-12'>
-            <div className='inline-flex justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700'>
+          {/* <div className='grid w-2/5 md:w-1/5 items-center mx-auto mt-12'>
+            <div className='text-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700'>
               Browse More
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

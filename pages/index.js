@@ -13,6 +13,7 @@ import Testimonials from "../components/testimonials";
 import Pricing from "../components/pricing";
 import Banner from "../components/banner";
 import HeaderSlim from "../components/headerSlim";
+import Ticker from "../components/ticker";
 
 export default function Index({ allPosts, preview }) {
   return (
@@ -25,9 +26,10 @@ export default function Index({ allPosts, preview }) {
           <Banner />
           <HeaderSlim />
           <Intro />
+          <Ticker />
+          <Favorites posts={allPosts} title='New Arrivals' />
           <Testimonials />
-          <Favorites posts={allPosts} title='Popular Menu Items' />
-          <Features />
+          {/* <Features /> */}
           <Pricing />
           <Promo />
           <CTA />

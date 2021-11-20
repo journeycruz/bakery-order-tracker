@@ -2,7 +2,7 @@ import React from "react";
 
 function Testimonials() {
   return (
-    <div className='mt-16 max-w-7xl mx-auto'>
+    <div className='pt-24 max-w-7xl mx-auto'>
       <section className='text-gray-600 body-font'>
         <h1 className='mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center'>
           What people are saying.

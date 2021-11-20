@@ -27,7 +27,7 @@ export default {
       {
         title: "Rating",
         name: "rating",
-        type: "number", // Required
+        type: "string", // Required
         description: "Customer's Rating",
       },
       {

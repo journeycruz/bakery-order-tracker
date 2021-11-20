@@ -4,9 +4,9 @@ function Pricing() {
   return (
     <div>
       <section className='text-gray-600 body-font overflow-hidden max-w-7xl mx-auto'>
-        <div className='container px-5 py-24 mx-auto'>
+        <div className='container px-5 pt-16 pb-32 mx-auto'>
           <div className='flex flex-col text-center w-full mb-20'>
-            <h1 className='mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl pb-4'>
+            <h1 className='text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl pb-4'>
               Pricing
             </h1>
             <p className='lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500'>

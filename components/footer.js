@@ -1,15 +1,15 @@
 export default function Footer() {
   return (
     <footer className='text-gray-600 body-font'>
-      <div className='container px-5 py-16 mx-auto'>
-        <div className='flex flex-wrap md:text-left text-center order-first justify-around'>
-          <div className='lg:w-2/5 md:w-1/2 w-auto h-full px-4'>
+      <div className='container px-2 md:px-4 py-16 mx-auto max-w-7xl'>
+        <div className='flex flex-wrap md:text-left text-center order-first justify-between'>
+          <div className='lg:w-2/5 md:w-1/2 w-full h-full px-2 md:pr-4'>
             <h2 className='title-font font-medium text-gray-900 tracking-widest text-sm mb-3'>
               SERVICING SAN ANTONIO
             </h2>
             <iframe
               src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d444570.58901302365!2d-98.79460075508489!3d29.481137029187842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c58af04d00eaf%3A0x856e13b10a016bc!2sSan%20Antonio%2C%20TX!5e0!3m2!1sen!2sus!4v1637186820205!5m2!1sen!2sus'
-              className='w-full h-96 lg:w-full lg:h-64 m-auto md:m-0 mb-12'
+              className='w-full h-96 lg:w-full lg:h-64 m-auto md:m-0 mb-12 rounded-lg'
               allowFullScreen={true}
               loading='lazy'
               ></iframe>
