@@ -1,7 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { SpeakerphoneIcon, XIcon } from "@heroicons/react/outline";
-import { useState, Fragment } from "react";
-import { Transition } from "@headlessui/react";
+import { useState } from "react";
 
 export default function Banner() {
   const [isOpen, setIsOpen] = useState(true);
