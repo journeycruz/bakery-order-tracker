@@ -1,4 +1,5 @@
 module.exports = {
+  purge: ["./src/**/*.html", "./src/**/*.js"],
   variants: {
     extend: {
       rotate: ["active", "group-hover"],
