@@ -28,7 +28,7 @@ export default function Index({ allPosts, preview }) {
           <Intro />
           <Ticker />
           <Favorites posts={allPosts} title='New Arrivals' />
-          <Testimonials />
+          {/* <Testimonials /> */}
           {/* <Features /> */}
           <Pricing />
           <Promo />

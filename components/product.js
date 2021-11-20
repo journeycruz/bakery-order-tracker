@@ -118,7 +118,7 @@ export default function Product({
           </ol>
         </nav>
         {/* Image gallery */}
-        <div className='max-w-2xl mx-auto pt-6 px-4 lg:grid-rows-[auto,auto,1fr] sm:px-6 lg:max-w-5xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8'>
+        <div className='max-w-2xl mx-auto pt-6 px-4 lg:grid-rows-[auto,auto,1fr] sm:px-6 lg:max-w-6xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8'>
           <div className='lg:col-span-3 pb-6'>
             <h1 className='text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
               {title}
@@ -163,7 +163,7 @@ export default function Product({
         </div>
 
         {/* Product info */}
-        <div className='max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-5xl lg:pt-16 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
+        <div className='max-w-2xl mx-auto px-4 sm:px-6 lg:max-w-6xl lg:pt-16 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
           <div className='pt-10 lg:pt-6 lg:col-start-1 lg:col-span-1 lg:pr-8'>
             {/* Description and details */}
             <div>

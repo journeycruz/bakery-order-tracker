@@ -32,7 +32,7 @@ export default function Post({ post, morePosts, preview }) {
           <PostTitle>Loading…</PostTitle>
         ) : (
           <div>
-            <div className='max-w-5xl mx-auto'>
+            <div className='max-w-6xl mx-auto'>
               <article>
                 <Head>
                   <title>{post.title}</title>
