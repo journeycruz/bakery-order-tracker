@@ -33,7 +33,6 @@ export default function OrderForm({ _id }) {
     } catch (err) {
       setFormData(err);
     }
-    console.log(data);
   };
 
   if (isSubmitting) {

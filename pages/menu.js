@@ -73,11 +73,10 @@ function classNames(...classes) {
 
 export default function MenuItems({ allPosts, preview }) {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-  console.log(allPosts);
   return (
     <>
       <Header />
-      <div className='bg-white'>
+      <div className='bg-white w-full'>
         <div>
           {/* Mobile filter dialog */}
           <Transition.Root show={mobileFiltersOpen} as={Fragment}>
@@ -193,8 +192,8 @@ export default function MenuItems({ allPosts, preview }) {
             </Dialog>
           </Transition.Root>
 
-          <main className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='relative z-10 flex items-baseline justify-between pt-16 pb-6 border-b border-gray-200'>
+          <main className='max-w-full mx-auto px-4 sm:px-6 lg:px-8'>
+            <div className='relative z-10 flex items-baseline justify-between pt-8 pb-6 border-b border-gray-200'>
               <h1 className='text-4xl font-extrabold tracking-tight text-gray-900'>
                 Menu Items
               </h1>
@@ -264,7 +263,7 @@ export default function MenuItems({ allPosts, preview }) {
                 Products
               </h2>
 
-              <div className='grid grid-cols-1 lg:grid-cols-4 gap-x-8 gap-y-10'>
+              <div className='grid grid-cols-1 lg:grid-cols-5 gap-x-8 gap-y-10'>
                 {/* Filters */}
                 <form className='hidden lg:block'>
                   <h3 className='sr-only'>Categories</h3>
@@ -335,10 +334,10 @@ export default function MenuItems({ allPosts, preview }) {
                 </form>
 
                 {/* Product grid */}
-                <div className='grid grid-cols-3 gap-8 w-100 col-span-3'>
+                <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 col-span-4'>
                   {allPosts.map((post) => (
                     <div key={post.title} className='group relative'>
-                      <div className='relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1'>
+                      <div className='relative w-full h-36 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1 lg:aspect-h-1'>
                         <Link as={`/posts/${post.slug}`} href='/posts/[slug]'>
                           <img
                             src={imageBuilder(post.coverImage)

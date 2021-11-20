@@ -21,9 +21,9 @@ export default function HeaderSlim() {
         <>
           <div className='max-w-full mx-auto px-2 sm:px-6 lg:px-8'>
             <div className='relative flex items-center justify-between h-16'>
-              <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
-                {/* Mobile menu button*/}
-                <Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700'>
+              {/* <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'> */}
+              {/* Mobile menu button*/}
+              {/* <Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700'>
                   <span className='sr-only'>Open main menu</span>
                   {open ? (
                     <XIcon className='block h-6 w-6' aria-hidden='true' />
@@ -31,21 +31,22 @@ export default function HeaderSlim() {
                     <MenuIcon className='block h-6 w-6' aria-hidden='true' />
                   )}
                 </Disclosure.Button>
-              </div>
-              <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
-                <div className='flex-shrink-0 flex items-center'>
-                  <img
-                    className='block lg:hidden h-8 w-auto'
+              </div> */}
+              <div className='flex-1 flex items-center justify-start sm:items-stretch sm:justify-start'>
+                <div className='flex-shrink-0 flex items-start'>
+                  {/* <img
+                    className='block lg:hidden h-8 ml-2 w-auto'
                     src='https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg'
-                    alt='Workflow'
-                  />
-                  <img
+                    alt='Liza&#44;s Lil Pies and More'
+                  /> */}
+                  <div className='text-white'>Liza's Lil Pies and More</div>
+                  {/* <img
                     className='hidden lg:block h-8 w-auto'
                     src='https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg'
-                    alt='Workflow'
-                  />
+                    alt='Liza&#44;s Lil Pies and More'
+                  /> */}
                 </div>
-                <div className='hidden sm:block sm:ml-6'>
+                {/* <div className='hidden sm:block sm:ml-6'>
                   <div className='flex space-x-4'>
                     {navigation.map((item) => (
                       <a
@@ -62,14 +63,14 @@ export default function HeaderSlim() {
                       </a>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </div>
               <div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
                 {/* Profile dropdown */}
                 <Menu as='div' className='ml-3 relative'>
                   <div>
                     <Menu.Button className='bg-gray-800 flex text-sm rounded-full'>
-                      <span className='sr-only'>Open user menu</span>
+                      <span className='sr-only'>Open contact menu</span>
                       <img
                         className='h-8 w-8 rounded-full'
                         src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
