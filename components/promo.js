@@ -5,7 +5,7 @@ export default function Promo() {
         <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
             <div className="sm:max-w-lg">
-              <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
+              <h1 className="pb-8 md:pb-0 text-3xl text-center lg:text-left font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                 Tis the season
               </h1>
               <p className="mt-4 text-xl text-gray-500">

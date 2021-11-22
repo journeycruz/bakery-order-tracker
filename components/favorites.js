@@ -1,35 +1,6 @@
 import { imageBuilder } from "../lib/sanity";
 import Link from "next/link";
 
-const callouts = [
-  {
-    name: "Desk and Office",
-    description: "Work from home accessories",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg",
-    imageAlt:
-      "Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.",
-    href: "#",
-  },
-  {
-    name: "Self-Improvement",
-    description: "Journals and note-taking",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg",
-    imageAlt:
-      "Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.",
-    href: "#",
-  },
-  {
-    name: "Travel",
-    description: "Daily commute essentials",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg",
-    imageAlt: "Collection of four insulated travel bottles on wooden shelf.",
-    href: "#",
-  },
-];
-
 export default function Favorites({ posts, title }) {
   return (
     <div className='bg-gray-100 py-6 md:py-0'>
@@ -41,10 +12,10 @@ export default function Favorites({ posts, title }) {
           <div className='space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-12'>
             {posts.slice(0, 3).map((post) => (
               <>
-                <div className='min-h-24 bg-transparent py-6 flex flex-col justify-center sm:py-12 group'>
+                {/* <div className='min-h-24 bg-transparent py-6 flex flex-col justify-center sm:py-12 group'>
                   <div className='relative w-11/12 mx-auto'>
-                    <div className='absolute inset-0 bg-gradient-to-r from-pink-400 to-red-500 shadow-lg transform -skew-y-3 transition ease-in-out duration-300 sm:skew-y-0 sm:-rotate-3 rounded-3xl group-hover:rotate-0 group-hover:shadow-2xl'></div>
-                    <div className='relative bg-white shadow-lg hover:shadow-2xl cursor-pointer transition ease-in-out duration-300 rounded-3xl p-6 transform hover:-translate-y-1'>
+                    <div className='absolute inset-0 bg-gradient-to-r from-gray-400 to-gray-500 shadow-lg transform -skew-y-2 transition ease-in-out duration-300 sm:skew-y-0 sm:-rotate-1 rounded-xl group-hover:rotate-0 group-hover:shadow-xl'></div>
+                    <div className='relative bg-white shadow-lg hover:shadow-2xl cursor-pointer transition ease-in-out duration-300 rounded-xl p-6 transform hover:-translate-y-1'>
                       <Link as={`/posts/${post.slug}`} href='/posts/[slug]'>
                         <div key={post.title}>
                           <img
@@ -78,7 +49,34 @@ export default function Favorites({ posts, title }) {
                       </Link>
                     </div>
                   </div>
-                </div>
+                </div> */}
+                <Link as={`/posts/${post.slug}`} href='/posts/[slug]'>
+                  <a
+                    key={post.title}
+                    aria-label='View Item'
+                    className='inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2'>
+                    <div className='flex flex-col h-full'>
+                      <img
+                        src={imageBuilder(post.coverImage)
+                          .width(1240)
+                          .height(540)
+                          .url()}
+                        className='object-cover w-full h-48'
+                        alt={post.title}
+                      />
+                      <div className='flex-grow border border-t-0 rounded-b'>
+                        <div className='p-5'>
+                          <h6 className='mb-2 font-semibold leading-5'>
+                            {post.title}
+                          </h6>
+                          <p className='text-sm text-gray-900'>
+                            {post.excerpt}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </Link>
               </>
             ))}
           </div>

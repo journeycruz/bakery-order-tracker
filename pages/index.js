@@ -1,7 +1,7 @@
 import Container from "../components/container";
 import MoreStories from "../components/more-stories";
 import HeroPost from "../components/hero-post";
-import Intro from "../components/intro";
+import Hero from "../components/hero";
 import Layout from "../components/layout";
 import { getAllPostsForHome } from "../lib/api";
 import Head from "next/head";
@@ -25,13 +25,13 @@ export default function Index({ allPosts, preview }) {
         <Container>
           <Banner />
           <HeaderSlim />
-          <Intro />
+          <Hero />
           <Ticker />
           <Features />
           <Favorites posts={allPosts} title='New Arrivals' />
+          <Promo />
           {/* <Testimonials /> */}
           <Pricing />
-          <Promo />
           <CTA />
         </Container>
       </Layout>

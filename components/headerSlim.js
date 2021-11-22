@@ -2,12 +2,18 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import { ChevronDownIcon } from "@heroicons/react/solid";
 
 const navigation = [
-  { name: "Dashboard", href: "#", current: false },
+  { name: "Pricing", href: "#", current: false },
   { name: "Events", href: "#", current: false },
-  { name: "Parties", href: "#", current: false },
-  { name: "Catering", href: "#", current: false },
+];
+
+const menu = [
+  { name: "Pies", href: "#", current: false },
+  { name: "Cakes", href: "#", current: false },
+  { name: "Cupcakes", href: "#", current: false },
+  { name: "Cookies", href: "#", current: false },
 ];
 
 function classNames(...classes) {
@@ -21,9 +27,9 @@ export default function HeaderSlim() {
         <>
           <div className='max-w-full mx-auto px-2 sm:px-6 lg:px-8'>
             <div className='relative flex items-center justify-between h-16'>
-              {/* <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'> */}
-              {/* Mobile menu button*/}
-              {/* <Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700'>
+              <div className='flex items-center lg:hidden mr-2'>
+                {/* Mobile menu button*/}
+                <Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700'>
                   <span className='sr-only'>Open main menu</span>
                   {open ? (
                     <XIcon className='block h-6 w-6' aria-hidden='true' />
@@ -31,7 +37,7 @@ export default function HeaderSlim() {
                     <MenuIcon className='block h-6 w-6' aria-hidden='true' />
                   )}
                 </Disclosure.Button>
-              </div> */}
+              </div>
               <div className='flex-1 flex items-center justify-start sm:items-stretch sm:justify-start'>
                 <div className='flex-shrink-0 flex items-start'>
                   {/* <img
@@ -39,15 +45,50 @@ export default function HeaderSlim() {
                     src='https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg'
                     alt='Liza&#44;s Lil Pies and More'
                   /> */}
-                  <div className='text-white my-auto'>Liza's Lil Pies and More</div>
+                  <div className='text-white my-auto cursive'>
+                    Liza's Lil Pies and More
+                  </div>
                   {/* <img
                     className='hidden lg:block h-8 w-auto'
                     src='https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg'
                     alt='Liza&#44;s Lil Pies and More'
                   /> */}
                 </div>
-                <div className='hidden sm:block sm:ml-6'>
+                <div className='hidden lg:block sm:ml-6'>
                   <div className='flex space-x-4'>
+                    <Menu>
+                      <div className='my-auto'>
+                        <Menu.Button>
+                          <a className='text-gray-300 hover:bg-gray-700 pr-2 px-3 py-2 hover:text-white py-auto rounded-md text-sm font-medium'>
+                            Menu <ChevronDownIcon className='h-4 inline-flex' />
+                          </a>
+                        </Menu.Button>
+                      </div>
+                      <Transition
+                        as={Fragment}
+                        enter='transition ease-out duration-100'
+                        enterFrom='transform opacity-0 scale-95'
+                        enterTo='transform opacity-100 scale-100'
+                        leave='transition ease-in duration-75'
+                        leaveFrom='transform opacity-100 scale-100'
+                        leaveTo='transform opacity-0 scale-95'>
+                        <Menu.Items
+                          className='z-50 max-w-xl w-full mt-14 absolute align-start justify-items-start rounded-md shadow-lg py-1 px-4 bg-white text-left'
+                          style={{ marginLeft: "0px" }}>
+                          <Menu.Item>
+                            <div className='relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8'>
+                              <div className=''>
+                                <a
+                                  href='#'
+                                  className='-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50'>
+                                  Hello
+                                </a>
+                              </div>
+                            </div>
+                          </Menu.Item>
+                        </Menu.Items>
+                      </Transition>
+                    </Menu>
                     {navigation.map((item) => (
                       <a
                         key={item.name}
@@ -70,6 +111,9 @@ export default function HeaderSlim() {
                 <Menu as='div' className='ml-3 relative'>
                   <div>
                     <Menu.Button className='bg-gray-800 flex text-sm rounded-full'>
+                      <h1 className='my-auto mx-3 text-gray-400 hover:text-white text-base static hidden lg:block'>
+                        Contact
+                      </h1>
                       <span className='sr-only'>Open contact menu</span>
                       <img
                         className='h-8 w-8 rounded-full'
@@ -175,8 +219,42 @@ export default function HeaderSlim() {
             </div>
           </div>
 
-          <Disclosure.Panel className='sm:hidden'>
+          <Disclosure.Panel className='lg:hidden'>
             <div className='px-2 pt-2 pb-3 space-y-1'>
+              <Menu>
+                <div className='my-auto'>
+                  <Menu.Button>
+                    <a className='text-gray-300 hover:bg-gray-700 pr-2 px-3 py-2 hover:text-white py-auto rounded-md text-sm font-medium'>
+                      Menu <ChevronDownIcon className='h-4 inline-flex' />
+                    </a>
+                  </Menu.Button>
+                </div>
+                <Transition
+                  as={Fragment}
+                  enter='transition ease-out duration-100'
+                  enterFrom='transform opacity-0 scale-95'
+                  enterTo='transform opacity-100 scale-100'
+                  leave='transition ease-in duration-75'
+                  leaveFrom='transform opacity-100 scale-100'
+                  leaveTo='transform opacity-0 scale-95'>
+                  <Menu.Items
+                    className='z-50 max-w-md w-full mt-14 absolute align-center justify-items-center rounded-md shadow-lg py-1 px-4 bg-white text-left'
+                    style={{ marginLeft: "0px" }}>
+                    <Menu.Item>
+                      <div className='relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8'>
+                        <div className=''>
+                          <a
+                            href='#'
+                            className='-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50'>
+                            Hello
+                          </a>
+                        </div>
+                      </div>
+                    </Menu.Item>
+                  </Menu.Items>
+                </Transition>
+              </Menu>
+
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
