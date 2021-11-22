@@ -11,12 +11,7 @@ export default function Banner() {
   }
 
   return (
-    <motion.div
-      initial={{ y: -70 }}
-      animate={{ y: 0 }}
-      transition={{
-        duration: .5,
-      }}>
+    <motion.div>
       <div className='bg-rose-gold-300 w-full z-50 shadow-md'>
         <div className='max-w-full mx-auto py-3 px-3 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between flex-wrap'>

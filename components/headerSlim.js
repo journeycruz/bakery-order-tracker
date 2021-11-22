@@ -24,13 +24,7 @@ function classNames(...classes) {
 
 export default function HeaderSlim() {
   return (
-    <motion.div
-      initial={{ y: -125 }}
-      animate={{ y: 0 }}
-      transition={{
-        duration: 0.5,
-        delay: 0.5,
-      }}>
+    <motion.div>
       <Disclosure as='nav' className='bg-rose-gold-900 z-20'>
         {({ open }) => (
           <>
