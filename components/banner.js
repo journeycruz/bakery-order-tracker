@@ -1,6 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { SpeakerphoneIcon, XIcon } from "@heroicons/react/outline";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Banner() {
   const [isOpen, setIsOpen] = useState(true);
@@ -10,7 +11,12 @@ export default function Banner() {
   }
 
   return (
-    <div className=''>
+    <motion.div
+      initial={{ y: -70 }}
+      animate={{ y: 0 }}
+      transition={{
+        duration: .5,
+      }}>
       <div className='bg-rose-gold-300 w-full z-50 shadow-md'>
         <div className='max-w-full mx-auto py-3 px-3 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between flex-wrap'>
@@ -47,6 +53,6 @@ export default function Banner() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

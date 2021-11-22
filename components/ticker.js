@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 function Ticker() {
   return (
     <div className='bg-rose-gold-50'>
-      <Marquee speed={40} gradient={false} pauseOnClick={true} delay={5}>
+      <Marquee speed={40} gradient={false}>
         {/* Start Testimonial 1 */}
         <div className=' flex flex-col justify-center sm:py-12 group ml-12 my-auto group'>
           <div className='relative w-11/12 mx-auto md:mt-6 md:mb-2 my-24'>
