@@ -7,6 +7,7 @@ import { ChevronDownIcon } from "@heroicons/react/solid";
 const navigation = [
   { name: "Pricing", href: "#", current: false },
   { name: "Events", href: "#", current: false },
+  { name: "Catering", href: "#", current: false },
 ];
 
 const menu = [
@@ -22,19 +23,19 @@ function classNames(...classes) {
 
 export default function HeaderSlim() {
   return (
-    <Disclosure as='nav' className='bg-gray-800'>
+    <Disclosure as='nav' className='bg-rose-gold-900'>
       {({ open }) => (
         <>
           <div className='max-w-full mx-auto px-2 sm:px-6 lg:px-8'>
             <div className='relative flex items-center justify-between h-16'>
               <div className='flex items-center lg:hidden mr-2'>
                 {/* Mobile menu button*/}
-                <Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700'>
+                <Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-rose-gold-50 hover:text-white hover:bg-rose-gold-700'>
                   <span className='sr-only'>Open main menu</span>
                   {open ? (
-                    <XIcon className='block h-6 w-6' aria-hidden='true' />
+                    <XIcon className='text-rose-gold-50 block h-6 w-6' aria-hidden='true' />
                   ) : (
-                    <MenuIcon className='block h-6 w-6' aria-hidden='true' />
+                    <MenuIcon className='text-rose-gold-50 block h-6 w-6' aria-hidden='true' />
                   )}
                 </Disclosure.Button>
               </div>
@@ -45,7 +46,7 @@ export default function HeaderSlim() {
                     src='https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg'
                     alt='Liza&#44;s Lil Pies and More'
                   /> */}
-                  <div className='text-white my-auto cursive'>
+                  <div className='text-white my-auto cursive text-2xl'>
                     Liza's Lil Pies and More
                   </div>
                   {/* <img
@@ -59,8 +60,8 @@ export default function HeaderSlim() {
                     <Menu>
                       <div className='my-auto'>
                         <Menu.Button>
-                          <a className='text-gray-300 hover:bg-gray-700 pr-2 px-3 py-2 hover:text-white py-auto rounded-md text-sm font-medium'>
-                            Menu <ChevronDownIcon className='h-4 inline-flex' />
+                          <a className='text-rose-gold-50 hover:bg-rose-gold-700 pr-2 px-3 py-2 hover:text-white py-auto rounded-md text-sm font-medium'>
+                            Sweets <ChevronDownIcon className='h-4 inline-flex' />
                           </a>
                         </Menu.Button>
                       </div>
@@ -73,15 +74,48 @@ export default function HeaderSlim() {
                         leaveFrom='transform opacity-100 scale-100'
                         leaveTo='transform opacity-0 scale-95'>
                         <Menu.Items
-                          className='z-50 max-w-xl w-full mt-14 absolute align-start justify-items-start rounded-md shadow-lg py-1 px-4 bg-white text-left'
+                          className='z-50 max-w-xl w-full mt-14 absolute align-start justify-items-start rounded-md shadow-lg bg-white text-left'
                           style={{ marginLeft: "0px" }}>
                           <Menu.Item>
-                            <div className='relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8'>
+                            <div className='relative grid gap-6 bg-white py-3 sm:gap-8 sm:p-4'>
                               <div className=''>
                                 <a
                                   href='#'
-                                  className='-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50'>
-                                  Hello
+                                  className='-m-3 p-4 flex items-start rounded-lg hover:bg-gray-50'>
+                                  Pies
+                                </a>
+                              </div>
+                            </div>
+                          </Menu.Item>
+                          <Menu.Item>
+                            <div className='relative grid gap-6 bg-white py-3 sm:gap-8 sm:p-4'>
+                              <div className=''>
+                                <a
+                                  href='#'
+                                  className='-m-3 p-4 flex items-start rounded-lg hover:bg-gray-50'>
+                                  Cakes
+                                </a>
+                              </div>
+                            </div>
+                          </Menu.Item>
+                          <Menu.Item>
+                            <div className='relative grid gap-6 bg-white py-3 sm:gap-8 sm:p-4'>
+                              <div className=''>
+                                <a
+                                  href='#'
+                                  className='-m-3 p-4 flex items-start rounded-lg hover:bg-gray-50'>
+                                  Cupcakes
+                                </a>
+                              </div>
+                            </div>
+                          </Menu.Item>
+                          <Menu.Item>
+                            <div className='relative grid gap-6 bg-white py-3 sm:gap-8 sm:p-4'>
+                              <div className=''>
+                                <a
+                                  href='#'
+                                  className='-m-3 p-4 flex items-start rounded-lg hover:bg-gray-50'>
+                                  Cookies
                                 </a>
                               </div>
                             </div>
@@ -95,8 +129,8 @@ export default function HeaderSlim() {
                         href={item.href}
                         className={classNames(
                           item.current
-                            ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                            ? "bg-gray-900 text-rose-gold-50"
+                            : "text-rose-gold-50 hover:bg-rose-gold-700 hover:text-white",
                           "px-3 py-2 rounded-md text-sm font-medium"
                         )}
                         aria-current={item.current ? "page" : undefined}>
@@ -111,13 +145,13 @@ export default function HeaderSlim() {
                 <Menu as='div' className='ml-3 relative'>
                   <div>
                     <Menu.Button className='bg-gray-800 flex text-sm rounded-full'>
-                      <h1 className='my-auto mx-3 text-gray-400 hover:text-white text-base static hidden lg:block'>
+                      <h1 className='my-auto mx-3 text-rose-gold-50 font-medium hover:text-white text-sm static hidden lg:block'>
                         Contact
                       </h1>
                       <span className='sr-only'>Open contact menu</span>
                       <img
                         className='h-8 w-8 rounded-full'
-                        src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+                        src='https://i.ibb.co/xMT4pV0/Screen-Shot-2021-11-22-at-4-51-33-AM.png'
                         alt=''
                       />
                     </Menu.Button>
@@ -137,7 +171,7 @@ export default function HeaderSlim() {
                             href='#'
                             className={classNames(
                               active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
+                              "block px-4 py-2 text-sm text-black"
                             )}>
                             <span className='inline-flex'>
                               <svg
@@ -164,7 +198,7 @@ export default function HeaderSlim() {
                             href='#'
                             className={classNames(
                               active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
+                              "block px-4 py-2 text-sm text-black"
                             )}>
                             <span className='inline-flex'>
                               <svg
@@ -191,7 +225,7 @@ export default function HeaderSlim() {
                             href='#'
                             className={classNames(
                               active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
+                              "block px-4 py-2 text-sm text-black"
                             )}>
                             <span className='inline-flex'>
                               <svg
@@ -222,9 +256,9 @@ export default function HeaderSlim() {
           <Disclosure.Panel className='lg:hidden'>
             <div className='px-2 pt-2 pb-3 space-y-1'>
               <Menu>
-                <div className='my-auto'>
+                <div className='my-auto w-full'>
                   <Menu.Button>
-                    <a className='text-gray-300 hover:bg-gray-700 pr-2 px-3 py-2 hover:text-white py-auto rounded-md text-sm font-medium'>
+                    <a className='block text-rose-gold-50 hover:text-white px-3 py-2 rounded-md text-base font-medium'>
                       Menu <ChevronDownIcon className='h-4 inline-flex' />
                     </a>
                   </Menu.Button>
@@ -237,16 +271,47 @@ export default function HeaderSlim() {
                   leave='transition ease-in duration-75'
                   leaveFrom='transform opacity-100 scale-100'
                   leaveTo='transform opacity-0 scale-95'>
-                  <Menu.Items
-                    className='z-50 max-w-md w-full mt-14 absolute align-center justify-items-center rounded-md shadow-lg py-1 px-4 bg-white text-left'
-                    style={{ marginLeft: "0px" }}>
+                  <Menu.Items className='z-50 w-11/12 mt-14 lg:ml-0 absolute align-center justify-items-center rounded-md shadow-lg py-1 px-4 bg-white text-left mx-auto'>
                     <Menu.Item>
-                      <div className='relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8'>
+                      <div className='relative grid gap-6 bg-white py-3 sm:gap-8 sm:p-4'>
                         <div className=''>
                           <a
                             href='#'
                             className='-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50'>
-                            Hello
+                            Pies
+                          </a>
+                        </div>
+                      </div>
+                    </Menu.Item>
+                    <Menu.Item>
+                      <div className='relative grid gap-6 bg-white py-3 sm:gap-8 sm:p-4'>
+                        <div className=''>
+                          <a
+                            href='#'
+                            className='-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50'>
+                            Cakes
+                          </a>
+                        </div>
+                      </div>
+                    </Menu.Item>
+                    <Menu.Item>
+                      <div className='relative grid gap-6 bg-white py-3 sm:gap-8 sm:p-4'>
+                        <div className=''>
+                          <a
+                            href='#'
+                            className='-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50'>
+                            Cupcakes
+                          </a>
+                        </div>
+                      </div>
+                    </Menu.Item>
+                    <Menu.Item>
+                      <div className='relative grid gap-6 bg-white py-3 sm:gap-8 sm:p-4'>
+                        <div className=''>
+                          <a
+                            href='#'
+                            className='-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50'>
+                            Cookies
                           </a>
                         </div>
                       </div>
@@ -262,8 +327,8 @@ export default function HeaderSlim() {
                   href={item.href}
                   className={classNames(
                     item.current
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      ? "bg-gray-900 text-rose-gold-50"
+                      : "text-rose-gold-50 hover:bg-rose-gold-700 hover:text-white",
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}>

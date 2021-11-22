@@ -1,11 +1,11 @@
 /* This example requires Tailwind CSS v2.0+ */
 export default function Promo() {
     return (
-      <div className="relative bg-white overflow-hidden">
+      <div className="bg-rose-gold-50 pb-48 mb-16 relative overflow-hidden">
         <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
             <div className="sm:max-w-lg">
-              <h1 className="pb-8 md:pb-0 text-3xl text-center lg:text-left font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              <h1 className="pb-8 md:pb-0 cormorant-sub text-left tracking-tight text-rose-gold-900 sm:text-4xl">
                 Tis the season
               </h1>
               <p className="mt-4 text-xl text-gray-500">
@@ -83,7 +83,7 @@ export default function Promo() {
   
                 <a
                   href="#"
-                  className="inline-block text-center bg-indigo-600 border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-indigo-700"
+                  className="inline-block text-center border border-transparent rounded-md py-3 px-8 font-medium text-white bg-rose-gold-300 hover:bg-rose-gold-500"
                 >
                   Seasonal Treats
                 </a>

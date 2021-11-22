@@ -6,3 +6,7 @@
 /* purgecss end ignore */
 
 @tailwind utilities;
+body {
+    background-color: #F9F1F0;
+    font-family: 'Open Sans', sans-serif;
+}

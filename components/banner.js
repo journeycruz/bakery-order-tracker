@@ -11,11 +11,11 @@ export default function Banner() {
 
   return (
     <div className=''>
-      <div className='bg-indigo-600 w-full z-50 shadow-md'>
+      <div className='bg-rose-gold-300 w-full z-50 shadow-md'>
         <div className='max-w-full mx-auto py-3 px-3 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between flex-wrap'>
             <div className='w-0 flex-1 flex items-center'>
-              <span className='flex p-2 rounded-lg bg-indigo-800'>
+              <span className='flex p-2 rounded-lg bg-rose-gold-500'>
                 <SpeakerphoneIcon
                   className='h-6 w-6 text-white'
                   aria-hidden='true'
@@ -31,7 +31,7 @@ export default function Banner() {
             <div className='order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto'>
               <a
                 href='#'
-                className='flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-white hover:bg-indigo-50'>
+                className='flex items-center justify-center px-4 py-2 rounded-md shadow-sm text-sm font-medium text-white bg-rose-gold-500 hover:bg-rose-gold-purple'>
                 Place An Order
               </a>
             </div>
@@ -39,7 +39,7 @@ export default function Banner() {
               <button
                 onClick={() => setIsOpen(false)}
                 type='button'
-                className='-mr-1 flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2'>
+                className='-mr-1 flex p-2 rounded-md hover:bg-rose-gold-purple focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2'>
                 <span className='sr-only'>Dismiss</span>
                 <XIcon className='h-6 w-6 text-white' aria-hidden='true' />
               </button>

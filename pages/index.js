@@ -22,13 +22,15 @@ export default function Index({ allPosts, preview }) {
         <Head>
           <title>Liza's Lil Pies and More</title>
         </Head>
-        <Container>
+        <header className='sticky top-0 z-50'>
           <Banner />
           <HeaderSlim />
+        </header>
+        <Container>
           <Hero />
           <Ticker />
           <Features />
-          <Favorites posts={allPosts} title='New Arrivals' />
+          <Favorites posts={allPosts} title='Newest Sweets & Treats' />
           <Promo />
           {/* <Testimonials /> */}
           <Pricing />

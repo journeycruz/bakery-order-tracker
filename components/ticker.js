@@ -3,12 +3,12 @@ import Marquee from "react-fast-marquee";
 
 function Ticker() {
   return (
-    <div>
-      <Marquee speed={45} gradient={false}>
+    <div className='bg-rose-gold-50'>
+      <Marquee speed={40} gradient={false} pauseOnClick={true} delay={5}>
         {/* Start Testimonial 1 */}
-        <div className='bg-transparent flex flex-col justify-center sm:py-12 group ml-12 my-auto group'>
+        <div className=' flex flex-col justify-center sm:py-12 group ml-12 my-auto group'>
           <div className='relative w-11/12 mx-auto md:mt-6 md:mb-2 my-24'>
-            <div className='absolute max-h-full inset-0 bg-gradient-to-r from-pink-400 to-red-500 shadow-lg transform transition ease-in-out duration-300 sm:-rotate-3 rounded-3xl group-hover:rotate-0 group-hover:shadow-xl'></div>
+            <div className='absolute max-h-full inset-0 bg-gradient-to-r from-gold-lighter to-gold-darker shadow-lg transform transition ease-in-out duration-300 sm:-rotate-3 rounded-3xl group-hover:rotate-0 group-hover:shadow-xl'></div>
             <div className='relative -rotate-2 group-hover:rotate-0 bg-white shadow-lg hover:shadow-xl transition ease-in-out duration-300 rounded-3xl transform hover:-translate-y-1'>
               <figure className='md:flex rounded-xl p-4 md:p-0 mx-auto'>
                 {/* Pastry Image */}
@@ -46,7 +46,7 @@ function Ticker() {
         {/* Start Testimonial 2 */}
         <div className='bg-transparent flex flex-col justify-center sm:py-12 group ml-12 my-auto group'>
           <div className='relative w-11/12 mx-auto md:mt-6 md:mb-2 my-24'>
-            <div className='absolute max-h-full inset-0 bg-gradient-to-r from-pink-400 to-red-500 shadow-lg transform transition ease-in-out duration-300 sm:rotate-3 rounded-3xl group-hover:rotate-0 group-hover:shadow-xl'></div>
+            <div className='absolute max-h-full inset-0 bg-gradient-to-r from-gold-lighter to-gold-darker shadow-lg transform transition ease-in-out duration-300 sm:rotate-3 rounded-3xl group-hover:rotate-0 group-hover:shadow-xl'></div>
             <div className='relative rotate-2 group-hover:rotate-0 bg-white shadow-lg hover:shadow-xl transition ease-in-out duration-300 rounded-3xl transform hover:-translate-y-1'>
               <figure className='md:flex rounded-xl p-4 md:p-0 mx-auto'>
                 {/* Pastry Image */}
@@ -84,7 +84,7 @@ function Ticker() {
         {/* Start Testimonial 3 */}
         <div className='bg-transparent flex flex-col justify-center sm:py-12 group ml-12 my-auto group'>
           <div className='relative w-11/12 mx-auto md:mt-6 md:mb-2 my-24'>
-            <div className='absolute max-h-full inset-0 bg-gradient-to-r from-pink-400 to-red-500 shadow-lg transform transition ease-in-out duration-300 sm:-rotate-3 rounded-3xl group-hover:rotate-0 group-hover:shadow-xl'></div>
+            <div className='absolute max-h-full inset-0 bg-gradient-to-r from-gold-lighter to-gold-darker shadow-lg transform transition ease-in-out duration-300 sm:-rotate-3 rounded-3xl group-hover:rotate-0 group-hover:shadow-xl'></div>
             <div className='relative -rotate-2 group-hover:rotate-0 bg-white shadow-lg hover:shadow-xl transition ease-in-out duration-300 rounded-3xl transform hover:-translate-y-1'>
               <figure className='md:flex rounded-xl p-4 md:p-0 mx-auto'>
                 {/* Pastry Image */}
@@ -122,7 +122,7 @@ function Ticker() {
         {/* Start Testimonial 4 */}
         <div className='bg-transparent flex flex-col justify-center sm:py-12 group ml-12 my-auto group'>
           <div className='relative w-11/12 mx-auto md:mt-6 md:mb-2 my-24'>
-            <div className='absolute max-h-full inset-0 bg-gradient-to-r from-pink-400 to-red-500 shadow-lg transform transition ease-in-out duration-300 sm:rotate-3 rounded-3xl group-hover:rotate-0 group-hover:shadow-xl'></div>
+            <div className='absolute max-h-full inset-0 bg-gradient-to-r from-gold-lighter to-gold-darker shadow-lg transform transition ease-in-out duration-300 sm:rotate-3 rounded-3xl group-hover:rotate-0 group-hover:shadow-xl'></div>
             <div className='relative rotate-2 group-hover:rotate-0 bg-white shadow-lg hover:shadow-xl transition ease-in-out duration-300 rounded-3xl transform hover:-translate-y-1'>
               <figure className='md:flex rounded-xl p-4 md:p-0 mx-auto'>
                 {/* Pastry Image */}

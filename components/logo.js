@@ -15,11 +15,11 @@ export default function Logo() {
           <linearGradient id='grad1' x1='0%' y1='0%' x2='100%' y2='0%'>
             <stop
               offset='0%'
-              style={{ stopColor: '#B68888', stopOpacity: 1 }}
+              style={{ stopColor: '#68343B', stopOpacity: 1 }}
             />
             <stop
               offset='100%'
-              style={{ stopColor: '#E0AFAF', stopOpacity: 1 }}
+              style={{ stopColor: '#68343B', stopOpacity: 1 }}
             />
           </linearGradient>
         </defs>
