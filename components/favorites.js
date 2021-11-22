@@ -52,10 +52,9 @@ export default function Favorites({ posts, title }) {
                 </div> */}
                 <Link as={`/posts/${post.slug}`} href='/posts/[slug]'>
                   <a
-                    key={post.title}
                     aria-label='View Item'
                     className='inline-block overflow-hidden duration-300 transform bg-white rounded shadow-sm hover:-translate-y-2'>
-                    <div className='flex flex-col h-full'>
+                    <div className='flex flex-col h-full' key={post.title}>
                       <img
                         src={imageBuilder(post.coverImage)
                           .width(1240)
