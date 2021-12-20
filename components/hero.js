@@ -24,19 +24,10 @@ export default function Hero() {
               <nav
                 className='relative flex items-center justify-start sm:h-10'
                 aria-label='Global'>
-                <div className='flex items-center flex-grow flex-shrink-0 lg:flex-grow-0'>
-                  <div className='flex items-center justify-between w-full md:w-auto'>
-                    <Logo />
-                  </div>
+                <div className='flex w-24 items-center flex-grow flex-shrink-0 lg:flex-grow-0'>
+                  <div className='flex items-center justify-between w-full md:w-auto'></div>
                 </div>
-                <div className='block ml-4 space-x-8'>
-                  <h1 className='block cursive py-2 text-lg font-thin text-black'>
-                    "Heal The World With Cupcakes."
-                  </h1>
-                  {/* <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                    Log in
-                  </a> */}
-                </div>
+                <div className='block ml-4 space-x-8'></div>
               </nav>
             </div>
 
@@ -67,9 +58,7 @@ export default function Hero() {
                       </Popover.Button>
                     </div>
                   </div>
-                  <div className='px-2 pt-2 pb-3 space-y-1'>
-
-                  </div>
+                  <div className='px-2 pt-2 pb-3 space-y-1'></div>
                   {/* <a
                     href="#"
                     className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"
@@ -84,11 +73,10 @@ export default function Hero() {
           <main className='mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28'>
             <div className='sm:text-center lg:text-left'>
               <h1 className='text-4xl tracking-loose mt-16'>
-                <span className='block cormorant-title text-rose-gold-900'>Homemade</span>{" "}
-                <span className='block mt-3 cormorant-title text-gold'>
-                  {" "}
-                  Cupcakes
+                <span className='block title text-rose-gold-900'>
+                  Homemade
                 </span>
+                <span className='block mt-3 title text-gold'> Cupcakes</span>
               </h1>
               <p className='my-10 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0'>
                 Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
@@ -106,7 +94,7 @@ export default function Hero() {
                 <div className='mt-3 sm:mt-0 sm:ml-3'>
                   <a
                     href='#'
-                    className='w-full flex items-center justify-center px-8 py-3 text-base font-medium rounded-md bg-rose-gold-100 hover:bg-rose-gold-200 md:py-4 md:text-lg md:px-10'>
+                    className='w-full flex items-center justify-center px-8 py-3 text-base font-medium rounded-md bg-pink hover:bg-rose-gold-200 md:py-4 md:text-lg md:px-10'>
                     Order Now
                   </a>
                 </div>
@@ -118,7 +106,7 @@ export default function Hero() {
       <div className='lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2'>
         <img
           className='h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full'
-          src='https://i.ibb.co/cDgYQMh/pexels-silvia-trigo-1857157.jpg'
+          src='https://www.aheadofthyme.com/wp-content/uploads/2016/04/mothers-day-vanilla-cupcakes-with-rose-petal-buttercream-icing-6.jpg.webp'
           alt=''
         />
       </div>

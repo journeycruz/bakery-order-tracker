@@ -6,7 +6,7 @@ export default function Favorites({ posts, title }) {
     <div className='bg-rose-gold-50 py-6 md:py-0 px-4'>
       <div className='max-w-7xl mx-auto md:px-12 sm:px-2 lg:px-8'>
         <div className='mx-auto py-12 lg:py-20 lg:max-w-none'>
-          <h2 className='pb-8 md:pb-0 text-center lg:text-left tracking-tight text-rose-gold-900 cormorant-sub'>
+          <h2 className='pb-8 md:pb-0 text-center tracking-tight text-rose-gold-900 cormorant-sub'>
             {title}
           </h2>
           <div className='space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-12'>
@@ -79,7 +79,7 @@ export default function Favorites({ posts, title }) {
               </>
             ))}
           </div>
-          <div className='grid place-items-center lg:place-items-end mt-12'>
+          <div className='grid place-items-center mt-12'>
             <div className='text-center px-5 py-3 w-11/12 lg:w-1/6 border border-transparent text-base font-medium rounded-md text-white bg-rose-gold-300 hover:bg-rose-gold-500'>
               Browse More
             </div>

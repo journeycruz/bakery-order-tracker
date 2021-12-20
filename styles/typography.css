@@ -1,30 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poiret+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Proza+Libre&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato&display=swap');
-.cursive {
-    font-family: 'Dancing Script', cursive;
-}
-
-.cormorant-title {
-    font-family: 'Cormorant', serif;
-    font-weight: 700;
-    font-size: 62px;
-}
-
-.cormorant-sub {
-    font-family: 'Cormorant', serif;
-    font-weight: 700;
-    font-size: 50px;
-}
-
-.proza {
-    font-family: 'Proza Libre', sans-serif;
-}
-
-.sans {
-    font-family: 'Open Sans', sans-serif;
-}
-
-.poiret {
-    font-family: 'Poiret One', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+.title {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
 }

@@ -4,6 +4,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { motion } from "framer-motion";
+import Logo from "./logo";
 
 const navigation = [
   { name: "Pricing", href: "#", current: false },
@@ -25,23 +26,23 @@ function classNames(...classes) {
 export default function HeaderSlim() {
   return (
     <motion.div>
-      <Disclosure as='nav' className='bg-rose-gold-900 z-20'>
+      <Disclosure as='nav' className='bg-red-200 z-20'>
         {({ open }) => (
           <>
             <div className='max-w-full mx-auto px-2 sm:px-6 lg:px-8'>
               <div className='relative flex items-center justify-between h-16'>
                 <div className='flex items-center lg:hidden mr-2'>
                   {/* Mobile menu button*/}
-                  <Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-rose-gold-50 hover:text-white hover:bg-rose-gold-700'>
+                  <Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-black hover:text-white hover:bg-rose-gold-700'>
                     <span className='sr-only'>Open main menu</span>
                     {open ? (
                       <XIcon
-                        className='text-rose-gold-50 block h-6 w-6'
+                        className='text-black block h-6 w-6'
                         aria-hidden='true'
                       />
                     ) : (
                       <MenuIcon
-                        className='text-rose-gold-50 block h-6 w-6'
+                        className='text-black block h-6 w-6'
                         aria-hidden='true'
                       />
                     )}
@@ -54,7 +55,11 @@ export default function HeaderSlim() {
                     src='https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg'
                     alt='Liza&#44;s Lil Pies and More'
                   /> */}
-                    <div className='text-white my-auto cursive text-2xl'>
+                    <div className='text-black my-auto inline-flex cursive text-2xl'>
+                      <div className='mr-3'>
+                        <Logo />
+                      </div>
+                      <span className="hidden sm:block"></span>
                       Liza's Lil Pies and More
                     </div>
                     {/* <img
@@ -68,7 +73,7 @@ export default function HeaderSlim() {
                       <Menu>
                         <div className='my-auto'>
                           <Menu.Button>
-                            <a className='text-rose-gold-50 hover:bg-rose-gold-700 pr-2 px-3 py-2 hover:text-white py-auto rounded-md text-sm font-medium'>
+                            <a className='text-black hover:bg-rose-gold-700 pr-2 px-3 py-2 hover:text-white py-auto rounded-md text-sm font-medium'>
                               Sweets{" "}
                               <ChevronDownIcon className='h-4 inline-flex' />
                             </a>
@@ -83,7 +88,7 @@ export default function HeaderSlim() {
                           leaveFrom='transform opacity-100 scale-100'
                           leaveTo='transform opacity-0 scale-95'>
                           <Menu.Items
-                            className='z-50 max-w-xl w-full mt-14 absolute align-start justify-items-start rounded-md shadow-lg bg-white text-left'
+                            className='z-50 max-w-xs w-full mt-14 absolute align-start justify-items-start rounded-md shadow-lg bg-white text-left'
                             style={{ marginLeft: "0px" }}>
                             <Menu.Item>
                               <div className='relative grid gap-6 bg-white py-3 sm:gap-8 sm:p-4'>
@@ -138,8 +143,8 @@ export default function HeaderSlim() {
                           href={item.href}
                           className={classNames(
                             item.current
-                              ? "bg-gray-900 text-rose-gold-50"
-                              : "text-rose-gold-50 hover:bg-rose-gold-700 hover:text-white",
+                              ? "bg-gray-900 text-black"
+                              : "text-black hover:bg-rose-gold-700 hover:text-white",
                             "px-3 py-2 rounded-md text-sm font-medium"
                           )}
                           aria-current={item.current ? "page" : undefined}>
@@ -153,8 +158,8 @@ export default function HeaderSlim() {
                   {/* Profile dropdown */}
                   <Menu as='div' className='ml-3 relative'>
                     <div>
-                      <Menu.Button className='bg-gray-800 flex text-sm rounded-full'>
-                        <h1 className='my-auto mx-3 text-rose-gold-50 font-medium hover:text-white text-sm static hidden lg:block'>
+                      <Menu.Button className='bg-transparent flex text-sm rounded-full'>
+                        <h1 className='my-auto mx-3 text-black font-medium hover:text-white text-sm static hidden lg:block'>
                           Contact
                         </h1>
                         <span className='sr-only'>Open contact menu</span>
@@ -267,7 +272,7 @@ export default function HeaderSlim() {
                 <Menu>
                   <div className='my-auto w-full'>
                     <Menu.Button>
-                      <a className='block text-rose-gold-50 hover:text-white px-3 py-2 rounded-md text-base font-medium'>
+                      <a className='block text-black hover:text-white px-3 py-2 rounded-md text-base font-medium'>
                         Menu <ChevronDownIcon className='h-4 inline-flex' />
                       </a>
                     </Menu.Button>
@@ -336,8 +341,8 @@ export default function HeaderSlim() {
                     href={item.href}
                     className={classNames(
                       item.current
-                        ? "bg-gray-900 text-rose-gold-50"
-                        : "text-rose-gold-50 hover:bg-rose-gold-700 hover:text-white",
+                        ? "bg-gray-900 text-black"
+                        : "text-black hover:bg-rose-gold-700 hover:text-white",
                       "block px-3 py-2 rounded-md text-base font-medium"
                     )}
                     aria-current={item.current ? "page" : undefined}>

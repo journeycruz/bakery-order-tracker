@@ -4,8 +4,8 @@ export default function Logo() {
       <svg
         version='1.0'
         xmlns='http://www.w3.org/2000/svg'
-        width='50px'
-        height='50px'
+        width='30px'
+        height='30px'
         viewBox='0 0 300.000000 365.000000'
         preserveAspectRatio='xMidYMid meet'>
         <metadata>

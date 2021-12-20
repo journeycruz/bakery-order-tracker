@@ -1,7 +1,6 @@
 export default function Pricing() {
   return (
     <div className='py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl lg:px-8 lg:py-20 bg-rose-gold-50'>
-      <div className='h-16 bg-gradient-to-b from-rose-gold-50 rotate-180 to-transparent w-full relative top-0 z-40 transform -translate-y-48 lg:-translate-y-52'></div>
       <div className='max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12'>
         <h2 className='max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight cormorant-sub text-rose-gold-900 sm:text-4xl md:mx-auto'>
           <span className='relative inline-block'>

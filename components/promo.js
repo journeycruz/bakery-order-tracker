@@ -2,7 +2,6 @@
 export default function Promo() {
     return (
       <div className="bg-rose-gold-50 pb-48 mb-16 relative overflow-hidden">
-        <div className="h-16 bg-gradient-to-b from-rose-gold-50 to-transparent w-full relative top-0 z-40"></div>
         <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
             <div className="sm:max-w-lg">

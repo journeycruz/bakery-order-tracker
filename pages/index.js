@@ -1,7 +1,7 @@
 import Container from "../components/container";
 import Hero from "../components/hero";
 import Layout from "../components/layout";
-import { getAllPostsForHome } from "../lib/api";
+import { getAllPostsForHome, getLandingPageContent } from "../lib/api";
 import Head from "next/head";
 import Features from "../components/features";
 import CTA from "../components/CTA";
@@ -11,6 +11,7 @@ import Pricing from "../components/pricing";
 import Banner from "../components/banner";
 import HeaderSlim from "../components/headerSlim";
 import Ticker from "../components/ticker";
+import HeroTwo from "../components/heroTwo";
 
 export default function Index({ allPosts, preview }) {
   return (
@@ -21,14 +22,14 @@ export default function Index({ allPosts, preview }) {
         </Head>
         <header className='sticky top-0 z-50'>
           <Banner />
-          <HeaderSlim />
         </header>
         <Container>
+          <HeaderSlim />
           <Hero />
           <Ticker />
           <Features />
-          <Favorites posts={allPosts} title='Newest Sweets & Treats' />
           <Promo />
+          <Favorites posts={allPosts} title='New Treats' />
           {/* <Testimonials /> */}
           <Pricing />
           <CTA />
@@ -40,8 +41,10 @@ export default function Index({ allPosts, preview }) {
 
 export async function getStaticProps({ preview = false }) {
   const allPosts = await getAllPostsForHome(preview);
+  const landingPageContent = await getLandingPageContent(preview);
+  console.log(landingPageContent)
   return {
-    props: { allPosts, preview },
+    props: { allPosts, landingPageContent, preview },
     revalidate: 1,
   };
 }

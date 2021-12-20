@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   variants: {
     extend: {
@@ -6,16 +8,25 @@ module.exports = {
   },
   theme: {
     colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      'black': '#25292C',
       'white': '#FFFFFF',
-      'black': '#122620',
-      'rose-gold-900': '#68343B',
+      blue: colors.blue,
+      gray: colors.trueGray,
+      indigo: colors.indigo,
+      red: colors.rose,
+      yellow: colors.yellow,
+      pink: colors.pink,
+      'leafy-green': '#F5E0E1',
+      'rose-gold-900': '#F2B5A7',
       'rose-gold-700': '#86434D',
       'rose-gold-600': '#A5525F',
       'rose-gold-500': '#B76E79',
       'rose-gold-300': '#C68D95',
       'rose-gold-200': '#D5ABB2',
       'rose-gold-100': '#E5CACE',
-      'rose-gold-50': '#F9F1F0',
+      'rose-gold-50': '#FFFFFF',
       'gold': '#A67A52',
       'gold-lighter': '#D6AD60',
       'gold-darker': '#B68D40',
