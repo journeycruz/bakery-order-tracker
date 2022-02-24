@@ -12,6 +12,7 @@ import Banner from "../components/banner";
 import HeaderSlim from "../components/headerSlim";
 import Ticker from "../components/ticker";
 import HeroTwo from "../components/heroTwo";
+import FrostingSVG from "../components/frostingSVG";
 
 export default function Index({ allPosts, preview }) {
   return (
@@ -21,15 +22,15 @@ export default function Index({ allPosts, preview }) {
           <title>Liza's Lil Pies and More</title>
         </Head>
         <header className='sticky top-0 z-50'>
-          <Banner />
         </header>
         <Container>
           <HeaderSlim />
           <Hero />
+          <FrostingSVG />
+          <Favorites posts={allPosts} title='Assortment' />
           <Ticker />
           <Features />
           <Promo />
-          <Favorites posts={allPosts} title='New Treats' />
           {/* <Testimonials /> */}
           <Pricing />
           <CTA />
@@ -41,10 +42,8 @@ export default function Index({ allPosts, preview }) {
 
 export async function getStaticProps({ preview = false }) {
   const allPosts = await getAllPostsForHome(preview);
-  const landingPageContent = await getLandingPageContent(preview);
-  console.log(landingPageContent)
   return {
-    props: { allPosts, landingPageContent, preview },
+    props: { allPosts, preview },
     revalidate: 1,
   };
 }

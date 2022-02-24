@@ -7,11 +7,11 @@ import Logo from "./logo";
 
 export default function Hero() {
   return (
-    <div className='relative bg-rose-gold-50 overflow-hidden'>
+    <div className='relative bg-pink-100 overflow-hidden'>
       <div className='max-w-full mx-auto'>
-        <div className='relative z-10 pb-8 bg-rose-gold-50 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32'>
+        <div className='relative z-10 pb-8 bg-pink-100 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32'>
           <svg
-            className='hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-rose-gold-50 transform translate-x-1/2'
+            className='hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-pink-100 transform translate-x-1/2'
             fill='currentColor'
             viewBox='0 0 100 100'
             preserveAspectRatio='none'
@@ -103,12 +103,8 @@ export default function Hero() {
           </main>
         </div>
       </div>
-      <div className='lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2'>
-        <img
-          className='h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full'
-          src='https://www.aheadofthyme.com/wp-content/uploads/2016/04/mothers-day-vanilla-cupcakes-with-rose-petal-buttercream-icing-6.jpg.webp'
-          alt=''
-        />
+      <div className='lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-pink-100 '>
+
       </div>
     </div>
   );

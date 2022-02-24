@@ -26,12 +26,12 @@ function classNames(...classes) {
 export default function HeaderSlim() {
   return (
     <motion.div>
-      <Disclosure as='nav' className='bg-red-200 z-20'>
+      <Disclosure as='nav' className='bg-transparent relative w-full z-50'>
         {({ open }) => (
           <>
-            <div className='max-w-full mx-auto px-2 sm:px-6 lg:px-8'>
-              <div className='relative flex items-center justify-between h-16'>
-                <div className='flex items-center lg:hidden mr-2'>
+            <div className='max-w-full absolute w-full mx-auto px-2 sm:px-6 lg:px-8'>
+              <div className='flex items-center justify-between h-16'>
+                <div className='flex top-0 items-center lg:hidden mr-2'>
                   {/* Mobile menu button*/}
                   <Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-black hover:text-white hover:bg-rose-gold-700'>
                     <span className='sr-only'>Open main menu</span>
@@ -55,7 +55,7 @@ export default function HeaderSlim() {
                     src='https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg'
                     alt='Liza&#44;s Lil Pies and More'
                   /> */}
-                    <div className='text-black my-auto inline-flex cursive text-2xl'>
+                    <div className='text-black my-auto inline-flex cursive text-xl'>
                       <div className='mr-3'>
                         <Logo />
                       </div>
@@ -68,7 +68,7 @@ export default function HeaderSlim() {
                     alt='Liza&#44;s Lil Pies and More'
                   /> */}
                   </div>
-                  <div className='hidden lg:block sm:ml-6'>
+                  <div className='hidden lg:block mx-auto'>
                     <div className='flex space-x-4'>
                       <Menu>
                         <div className='my-auto'>

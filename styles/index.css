@@ -10,3 +10,8 @@ body {
     font-family: 'Open Sans', sans-serif;
     background-color: #FFFFFF;
 }
+
+#contact-button {
+    min-width: 256px;
+    justify-content: end;
+}

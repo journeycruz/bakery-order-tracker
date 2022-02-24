@@ -361,7 +361,6 @@ export default function MenuItems({ allPosts, preview }) {
           </main>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
