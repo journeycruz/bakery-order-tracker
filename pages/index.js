@@ -28,11 +28,10 @@ export default function Index({ allPosts, preview }) {
           <Hero />
           <FrostingSVG />
           <Favorites posts={allPosts} title='Assortment' />
-          <Ticker />
           <Features />
           <Promo />
+          <Ticker />
           {/* <Testimonials /> */}
-          <Pricing />
           <CTA />
         </Container>
       </Layout>

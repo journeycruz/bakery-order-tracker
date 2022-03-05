@@ -7,11 +7,41 @@
 
 @tailwind utilities;
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Noto Serif Display', serif;
+    font-weight: 400;
     background-color: #FFFFFF;
 }
 
 #contact-button {
     min-width: 256px;
     justify-content: end;
+}
+
+.favorites-card--title {
+    display: grid;
+    place-items: center;
+    min-height: 95px;
+}
+
+.button--1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    border-radius: 0.75rem;
+    border-bottom-width: 2px;
+    border-color: #A7483F;
+    color: white;
+    background-color: #D10C54;
+}
+
+.button--1:hover {
+    background-color: #A7483F;
+}
+
+.border--1 {
+    border-width: 0.5px;
 }

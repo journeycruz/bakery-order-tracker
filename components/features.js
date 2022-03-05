@@ -38,7 +38,7 @@ export default function Features() {
       <div className='grid gap-5 row-gap-8 lg:grid-cols-2'>
         <div>
           <img
-            className='object-cover w-full h-56 rounded-3xl shadow-lg sm:h-96'
+            className='object-cover w-full h-56 shadow-lg sm:h-96'
             src='https://i.ibb.co/RgKhgBH/Screen-Shot-2021-11-22-at-3-27-55-AM.png'
             alt=''
           />

@@ -59,9 +59,9 @@ export default function OrderForm({ _id }) {
 
   return (
     <div>
-      <div className='min-h-screen bg-transparent py-6 flex flex-col sm:py-12'>
+      <div className='bg-transparent py-6 flex flex-col sm:py-12'>
         <div className='relative md:w-11/12 md:mx-auto sm:mx-auto'>
-          <div className='absolute inset-0 bg-gradient-to-r from-pink-400 to-red-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-3 rounded-3xl'></div>
+          {/* <div className='absolute inset-0 bg-gradient-to-r from-pink-400 to-red-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-3 rounded-3xl'></div> */}
           <div className='relative bg-white shadow-lg rounded-3xl p-6'>
             <form
               onSubmit={handleSubmit(onSubmit)}

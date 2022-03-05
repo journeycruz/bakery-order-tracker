@@ -34,6 +34,8 @@ module.exports = {
       'lighter-purple': '#A97199',
       'rose-gold-purple': '#B36E89',
       'cream': '#F4EBD0',
+      'maroon': '#A7483F',
+      'maroon-300': '#D10C54',
     },
     screens: {
       sm: "640px",
