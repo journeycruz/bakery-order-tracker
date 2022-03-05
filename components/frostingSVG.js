@@ -2,7 +2,7 @@ import React from 'react';
 
 const FrostingSVG = () => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <svg xmlns="http://www.w3.org/2000/svg" className='z-20 transform sm:-translate-y-1.5' viewBox="0 0 1440 320">
       <path
         fill="#FCE7F3"
         fillOpacity="1"
