@@ -9,7 +9,7 @@ export default function Comments({ comments = [] }) {
       </h2>
       <ul className='max-w-2xl mx-auto px-4'>
         {comments?.map(({ _id, _createdAt, name, email, comment, rating }) => (
-          <li key={_id} className=''>
+          <li key={_id} className='mb-5'>
             <hr className='mb-5' />
             <div className='flex justify-between'>
               <h4 className='mb-1 leading-tight'>

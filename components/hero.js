@@ -8,7 +8,11 @@ import Logo from './logo';
 export default function Hero() {
   return (
     <div className="relative bg-pink-100 overflow-hidden">
-      <img src="https://i.ibb.co/4tyKTJV/mintttttt-ccexpress.png" className="h-1/3 xl:h-1/2 2xl:h-3/5 absolute transform rotate-6 -translate-x-16 translate-y-72 xl:translate-y-72 hidden xl:block" alt="" />
+      <img
+        src="https://i.ibb.co/4tyKTJV/mintttttt-ccexpress.png"
+        className="h-1/3 xl:h-1/2 2xl:h-4/5 absolute transform rotate-6 -translate-x-16 translate-y-72 xl:translate-y-72 2xl:translate-y-32 hidden xl:block"
+        alt=""
+      />
       <div className="max-w-7xl mx-auto pt-12">
         <div className="relative z-10 pb-8 bg-transparent sm:pb-16 md:pb-20s max-w-lg sm:mx-auto lg:mx-0 lg:max-w-4xl lg:w-full lg:pb-28 xl:pb-32">
           <Popover>
@@ -65,7 +69,9 @@ export default function Hero() {
           <main className="mt-10 mx-auto px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center">
               <h1 className="text-4xl tracking-loose mt-16">
-                <span className="block title text-maroon">Homemade cupcakes</span>
+                <span className="block title text-maroon">
+                  Homemade cupcakes
+                </span>
                 <span className="block mt-3 title text-maroon">
                   {' '}
                   cakes & treats
@@ -91,7 +97,7 @@ export default function Hero() {
       </div>
       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/3 xl:w-2/5 bg-pink-100 ">
         <img
-          className="w-auto h-auto sm:mx-auto lg:mx-0 transform lg:translate-y-44 2xl:translate-y-20 z-50"
+          className="w-auto h-auto sm:mx-auto lg:mx-0 transform lg:translate-y-44 2xl:translate-y-20 z-50 -translate-x-4"
           src="https://i.ibb.co/wRCnttG/saf.png"
         />
       </div>
