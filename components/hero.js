@@ -8,8 +8,9 @@ import Logo from './logo';
 export default function Hero() {
   return (
     <div className="relative bg-pink-100 overflow-hidden">
+      <img src="https://i.ibb.co/4tyKTJV/mintttttt-ccexpress.png" className="h-1/3 absolute transform rotate-6 -translate-x-12 translate-y-72 hidden xl:block" alt="" />
       <div className="max-w-7xl mx-auto pt-12">
-        <div className="relative z-10 pb-8 bg-pink-100 sm:pb-16 md:pb-20 lg:max-w-lg lg:w-full lg:pb-28 xl:pb-32">
+        <div className="relative z-10 pb-8 bg-transparent sm:pb-16 md:pb-20s max-w-lg sm:mx-auto lg:mx-0 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
           <Popover>
             <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
               <nav
@@ -62,15 +63,15 @@ export default function Hero() {
           </Popover>
 
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-            <div className="sm:text-center lg:text-left">
+            <div className="sm:text-center">
               <h1 className="text-4xl tracking-loose mt-16">
                 <span className="block title text-maroon">Homemade</span>
                 <span className="block mt-3 title text-maroon">
                   {' '}
-                  cakes&desserts
+                  cakes&treats
                 </span>
               </h1>
-              <p className="my-10 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-lg sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+              <p className="my-10 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-lg sm:mx-auto md:mt-5 md:text-xl">
                 Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
                 lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
                 fugiat aliqua.
@@ -88,9 +89,9 @@ export default function Hero() {
           </main>
         </div>
       </div>
-      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-pink-100 ">
+      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 xl:1/3 bg-pink-100 ">
         <img
-          className="h-full w-auto sm:mx-auto sm:top-0 lg:mx-0"
+          className="w-auto h-auto sm:mx-auto"
           src="https://i.ibb.co/wRCnttG/saf.png"
         />
       </div>

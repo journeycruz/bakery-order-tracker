@@ -67,7 +67,7 @@ export default function Post({ post, morePosts, preview }) {
             <div className='w-full mt-20'>
               <Favorites posts={morePosts} title='More Like This' />
             </div>
-            <div className='max-w-5xl mx-auto'>
+            <div className='max-w-6xl mx-auto'>
               <div className='grid grid-cols-1 lg:grid-cols-2'>
                 <Comments comments={post.comments} />
                 <div className='lg:w-5/6 m-auto w-full'>
