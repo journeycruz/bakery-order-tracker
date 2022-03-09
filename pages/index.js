@@ -12,6 +12,7 @@ import Banner from "../components/banner";
 import HeaderSlim from "../components/headerSlim";
 import Ticker from "../components/ticker";
 import FrostingSVG from "../components/frostingSVG";
+import Fav from "../components/fav";
 
 export default function Index({ allPosts, favPost, preview }) {
   return (
