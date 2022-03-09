@@ -334,13 +334,13 @@ export default function MenuItems({ allPosts, preview }) {
                 </form>
 
                 {/* Product grid */}
-                <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 col-span-4'>
+                <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 col-span-4 max-w-7xl'>
                   {allPosts.map((post) => (
                     <div key={post.title} className='group relative'>
                       <div className='relative w-full h-36 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1 lg:aspect-h-1'>
                         <Link as={`/posts/${post.slug}`} href='/posts/[slug]'>
                           <img
-                            src={imageBuilder(post.coverImage)
+                            src={imageBuilder(post.images.coverImage)
                               .width(1240)
                               .height(540)
                               .url()}

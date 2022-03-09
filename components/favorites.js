@@ -6,7 +6,7 @@ export default function Favorites({ posts, title }) {
     <div className="bg-rose-gold-50 py-6 md:py-0 px-4">
       <div className="max-w-7xl mx-auto md:px-12 sm:px-2 lg:px-8">
         <div className="mx-auto py-12 lg:py-20 lg:max-w-none">
-          <h2 className="pb-8 text-center title--secondary text-maroon">
+          <h2 className="pb-8 text-center title--secondary text-maroon-300">
             {title}
           </h2>
           <div className="space-y-12 lg:space-y-0 lg:grid lg:grid-cols-4 lg:gap-x-12">
