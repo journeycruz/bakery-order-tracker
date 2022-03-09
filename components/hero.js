@@ -10,11 +10,11 @@ export default function Hero() {
     <div className="relative bg-pink-100 overflow-hidden">
       <img
         src="https://i.ibb.co/4tyKTJV/mintttttt-ccexpress.png"
-        className="h-1/3 xl:h-1/2 2xl:h-4/5 absolute transform rotate-6 -translate-x-16 translate-y-72 xl:translate-y-72 2xl:translate-y-32 hidden xl:block"
+        className="h-1/3 xl:h-1/2 2xl:hidden absolute transform rotate-6 -translate-x-16 translate-y-72 xl:translate-y-72 hidden xl:block"
         alt=""
       />
       <div className="max-w-7xl mx-auto pt-12">
-        <div className="relative z-10 pb-8 bg-transparent sm:pb-16 md:pb-20s max-w-lg sm:mx-auto lg:mx-0 lg:max-w-4xl lg:w-full lg:pb-28 xl:pb-32">
+        <div className="relative z-10 pb-8 bg-transparent sm:pb-16 md:pb-20s max-w-lg sm:mx-auto lg:mx-0 lg:max-w-4xl 2xl:max-w-6xl lg:w-full lg:pb-28 xl:pb-32">
           <Popover>
             <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
               <nav
@@ -77,7 +77,7 @@ export default function Hero() {
                   cakes & treats
                 </span>
               </h1>
-              <p className="my-10 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-lg sm:mx-auto md:mt-5 md:text-xl">
+              <p className="my-10 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-lg sm:mx-auto md:mt-5 md:text-xl 2xl:text-2xl">
                 Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
                 lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
                 fugiat aliqua.

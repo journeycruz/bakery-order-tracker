@@ -20,7 +20,7 @@ export default function Favorites({ posts, title }) {
                       <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
                         <div>
                           <img
-                            src={imageBuilder(post.coverImage)
+                            src={imageBuilder(post.images.coverImage)
                               .width(1240)
                               .height(540)
                               .url()}

@@ -42,10 +42,10 @@ export default function Post({ post, morePosts, preview }) {
                   content={post.body}
                   title={post.title}
                   slug={post.slug}
-                  imageTwo={post.imageTwo}
-                  imageThree={post.imageThree}
-                  imageFour={post.imageFour}
-                  imageFive={post.imageFive}
+                  imageTwo={post.images.imageTwo}
+                  imageThree={post.images.imageThree}
+                  imageFour={post.images.imageFour}
+                  imageFive={post.images.imageFive}
                   date={post.date}
                   author={post.author.name}
                   id={post._id}
@@ -58,10 +58,10 @@ export default function Post({ post, morePosts, preview }) {
               /> */}
               </article>
               <Specs
-                imageSix={post.imageSix}
-                imageSeven={post.imageSeven}
-                imageEight={post.imageEight}
-                imageNine={post.imageNine}
+                imageSix={post.images.imageSix}
+                imageSeven={post.images.imageSeven}
+                imageEight={post.images.imageEight}
+                imageNine={post.images.imageNine}
               />
             </div>
             <div className='w-full mt-20'>

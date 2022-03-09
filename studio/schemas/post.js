@@ -12,6 +12,12 @@ export default {
       type: "string",
     },
     {
+      title: 'Mark As Favorite',
+      name: 'favorite',
+      type: 'boolean',
+      description: "The page marked as favorite will appear on the home page of your site."
+    }, 
+    {
       name: "slug",
       title: "Slug",
       type: "slug",
